@@ -76,8 +76,8 @@ function sendMinecraftReport() {
 
     var issue = document.getElementById('reportIssue').value;
 
-    if(issue == "") {
-
+    if(issue === '') {
+        document.getElementById('issueText').display='';
     } else {
 
         var report = "Report made by: **" + name + "**\n" +
@@ -91,6 +91,7 @@ function sendMinecraftReport() {
         request.onreadystatechange = function() {
             if (request.readyState == XMLHttpRequest.DONE && request.status == 200) {
                 // successful
+                console.log("success!");
                 document.getElementById('reportSuccess').display='';
             }
         }
