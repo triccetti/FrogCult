@@ -88,8 +88,8 @@ function sendMinecraftReport() {
         const request = new XMLHttpRequest();
         request.open("POST", discordReportHook); 
         request.setRequestHeader('Content-type', 'application/json');
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+        request.onreadystatechange = function() {
+            if (request.readyState == XMLHttpRequest.DONE && request.status == 200) {
                 // successful
                 document.getElementById('reportSuccess').display='';
             }
