@@ -86,7 +86,7 @@
 					<h3>Server Map</h3>
 
 				</li>
-				<li class="card button">
+				<li class="card button" onclick="showReport()">
 					<h3>Report</h3>
 				</li> 
 				<li class="card button">
@@ -118,10 +118,31 @@
 			
 			</div>
 
-			<div id="report">
+			<div id="report" style="display:none">
 				
-				<button onclick="sendMinecraftReport()">Send</button>
-
+			 
+				<div id="form-main">
+					<div id="form-div">
+					  <form class="form" id="report">
+						
+						<p class="name">
+						  <input name="name" type="text" class="feedback-input" placeholder="Name (Optional)" id="reportName" />
+						</p>
+					 						
+						<p class="text">
+						  <textarea name="text" class="validate[required,length[6,300]] feedback-input" id="reportIssue" placeholder="Issue to report"></textarea>
+						</p>
+						
+						
+						<div class="submit" onclick="sendMinecraftReport()">
+						  <input type="submit card button" value="SEND REPORT" id="button-blue" />
+						  <div class="ease"></div>
+						</div>
+					  </form>
+					</div>
+					<div id="reportSuccess" style="display: none;">
+						<p>Report was sent successfully!</p>
+					</div>
 			</div>
 
 			<div id="howTo">

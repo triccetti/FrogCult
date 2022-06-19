@@ -50,25 +50,58 @@ function showMinecraft() {
 function showMap() { 
     document.getElementById('map').style.display = ''; 
     document.getElementById('join').style.display = 'none'; 
+    document.getElementById('report').style.display = 'none'; 
 }
 
 function showJoin() { 
     document.getElementById('join').style.display = ''; 
     document.getElementById('map').style.display = 'none'; 
+    document.getElementById('report').style.display = 'none'; 
 }
 
 
-function sendMinecraftReport() {
-    const request = new XMLHttpRequest();
-    request.open("POST", discordReportHook); 
-    request.setRequestHeader('Content-type', 'application/json');
+function showReport() { 
+    document.getElementById('join').style.display = 'none'; 
+    document.getElementById('map').style.display = 'none'; 
+    document.getElementById('report').style.display = ''; 
+}
 
-    const params = {
-        username: "Frog Cult Complaint Bot",
-        avatar_url: "",
-        content: "Test minecraft report1"
+
+
+function sendMinecraftReport() { 
+    var name = document.getElementById('reportName').value;
+    if(name == "") {
+        name = "Anonymous"
     }
-    
-    request.send(JSON.stringify(params));
 
+    var issue = document.getElementById('reportIssue').value;
+
+    if(issue == "") {
+
+    } else {
+
+        var report = "Report made by: **" + name + "**\n" +
+        ">>> " +  issue;
+
+
+
+        const request = new XMLHttpRequest();
+        request.open("POST", discordReportHook); 
+        request.setRequestHeader('Content-type', 'application/json');
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+                // successful
+                document.getElementById('reportSuccess').display='';
+            }
+        }
+        const params = {
+            username: "Frog Cult Complaint Bot",
+            avatar_url: "",
+            content: report
+        } 
+        
+        request.send(JSON.stringify(params));
+
+        
+    }
 }
