@@ -5,56 +5,70 @@
 }
 
 /* Color Variables */
-$color-discord: #7289da; 
+$color-discord: #7289da;
 $color-twitch: #6441a5;
 $color-twitter: #1DA1F2;
 $color-tiktok: #ff0050;
-$color-instagram: #405DE6;  
+$color-instagram: #405DE6;
 $color-youtube: #FF0000;
 
 $color-light-green: #AFF8A0;
 $color-green: #2c923d;
 $color-light-coral: #F5A8A4;
 $color-coral: #DE5A4B;
-  
 
-html, body { 
-    padding: 10px; 
+
+html,
+body {
+    padding: 10px;
     height: auto;
     width: auto
 }
 
-body {  
+body {
     background-image: url(assets/rm422-047.jpg);
     font-family: FrogFont;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
 }
 
 h1 {
     font-size: 72px;
-    display: inline; 
+    display: inline;
     color: white;
     border-radius: 35px;
-    box-shadow: 0px 0px 3px ;
+    box-shadow: 0px 0px 3px;
     border: 8px solid $color-coral;
     background-color: $color-light-coral;
-    padding: 5px 25px;   
+    padding: 5px 25px;
 }
 
 .button {
     cursor: pointer;
     background-color: $color-light-coral;
-    border: 8px solid $color-coral; 
+    border: 8px solid $color-coral;
     transition: all 0.3s ease;
     color: white;
+    border-radius: 50px;
+    display: inline-block;
+    width: 90%;
+    max-width: 20rem;
+    margin: 0.9rem;
+    text-decoration: none;
+    overflow: hidden;
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+    padding: 10px;
+    position: relative;
 
-    &:hover { 
+
+
+    &:hover {
         border: 8px solid $color-green;
         background-color: $color-light-green;
         color: $color-green;
     }
-} 
+}
 
 #header {
     margin-top: 100px;
@@ -67,11 +81,11 @@ h2 {
     margin: 10px;
 }
 
-.bottom { 
+.bottom {
     display: flex;
     align-items: center;
-    justify-content: center; 
-    position: fixed; 
+    justify-content: center;
+    position: fixed;
     width: 100%;
     z-index: 1;
     bottom: 50px;
@@ -79,19 +93,20 @@ h2 {
 
 .center {
     height: 95%;
-    text-align: center; 
+    text-align: center;
     align-items: center;
-    justify-content: center;   
-    margin: 20px; 
+    justify-content: center;
+    margin: 20px;
 }
 
 /* Social Icon Mixin */
 @mixin social-icon($color) {
     color: #fff;
 
-    .cls-1{
-        fill:$color;
+    .cls-1 {
+        fill: $color;
     }
+
     .tooltip {
         background: $color;
         color: currentColor;
@@ -101,11 +116,11 @@ h2 {
         }
     }
 }
-  
+
 svg {
-    position: absolute; 
+    position: absolute;
 }
-  
+
 /* Social Icons */
 .social-icons {
     display: flex;
@@ -127,37 +142,54 @@ svg {
     transition: all 0.15s ease;
 
     &:hover {
-        color: #fff; 
+        color: #fff;
         text-decoration: none;
-        
+
         .tooltip {
             visibility: visible;
             opacity: 1;
             transform: translate(-50%, -150%);
         }
     }
-        
+
     &:active {
-        svg {  
-            -webkit-filter: drop-shadow( 0px 0px 2px rgba(0, 0, 0, .3));
-            filter: drop-shadow( 0px 0px 2px rgba(0, 0, 0, .3)); 
+        svg {
+            -webkit-filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, .3));
+            filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, .3));
         }
     }
 
-    &--discord { @include social-icon($color-green); }
-    &--twitter { @include social-icon($color-green); }
-    &--twitch { @include social-icon($color-green); }
-    &--tiktok { @include social-icon($color-green); }
-    &--instagram { @include social-icon($color-green); }
-    &--youtube { @include social-icon($color-green); }
+    &--discord {
+        @include social-icon($color-green);
+    }
+
+    &--twitter {
+        @include social-icon($color-green);
+    }
+
+    &--twitch {
+        @include social-icon($color-green);
+    }
+
+    &--tiktok {
+        @include social-icon($color-green);
+    }
+
+    &--instagram {
+        @include social-icon($color-green);
+    }
+
+    &--youtube {
+        @include social-icon($color-green);
+    }
 
     i {
         position: relative;
-        top: 5px;    
+        top: 5px;
         z-index: 1;
     }
 }
-  
+
 /* Tooltips */
 .tooltip {
     display: block;
@@ -194,91 +226,98 @@ svg {
 /* App */
 /* Lazy Load Styles */
 .card-image {
-	display: block;
-	min-height: 20rem; /* layout hack */
-	background: #fff center center no-repeat;
-	background-size: cover;
-	filter: blur(3px); /* blur the lowres image */
+    display: block;
+    min-height: 20rem;
+    /* layout hack */
+    background: #fff center center no-repeat;
+    background-size: cover;
+    filter: blur(3px);
+    /* blur the lowres image */
 }
 
-.card-image > img {
-	display: block;
-	width: 100%;
-	opacity: 0; /* visually hide the img element */
+.card-image>img {
+    display: block;
+    width: 100%;
+    opacity: 0;
+    /* visually hide the img element */
 }
 
 .card-image.is-loaded {
-	filter: none; /* remove the blur on fullres image */
-	transition: filter 1s;
-} 
+    filter: none;
+    /* remove the blur on fullres image */
+    transition: filter 1s;
+}
 
-/* Card Styles */  
+/* Card Styles */
 .card-list {
-	display: block;
-	margin: 1rem auto;
-	padding: 0;
-	font-size: 0;
-	text-align: center;
-	list-style: none;
+    display: block;
+    margin: 1rem auto;
+    padding: 0;
+    font-size: 0;
+    text-align: center;
+    list-style: none;
 
-    
+
 }
 
 .card {
-    color: white; 
+    color: white;
     border: 8px solid $color-coral;
     background-color: $color-light-coral;
     border-radius: 50px;
-	display: inline-block;
-	width: 90%;
-	max-width: 20rem;
-	margin: 0.9rem; 
-	text-decoration: none;
-	overflow: hidden;
-	box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
-	transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+    display: inline-block;
+    width: 90%;
+    max-width: 20rem;
+    margin: 0.9rem;
+    text-decoration: none;
+    overflow: hidden;
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s;
 
-    position: relative;  
+    position: relative;
 
     a {
         text-decoration: none;
     }
-    h3{
-        font-size: 2.5rem; 
+
+    h3 {
+        font-size: 2.5rem;
         margin-top: 0.5rem;
     }
+
     p {
-        font-size: 1.3rem; 
+        font-size: 1.3rem;
     }
-    img { 
+
+    img {
         height: 350px;
     }
 }
 
 .card:hover {
-	transform: translateY(-0.5rem) scale(1.0125);
-	box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+    transform: translateY(-0.5rem) scale(1.0125);
+    box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
 }
 
 .card-description {
-	display: block;
-	padding: 1em; 
-	text-decoration: none;
+    display: block;
+    padding: 1em;
+    text-decoration: none;
 }
- 
 
-.leaf {    
-    transition: all 0.15s ease;  
-    position: fixed; 
-    color:white; 
-} 
+
+.leaf {
+    transition: all 0.15s ease;
+    position: fixed;
+    color: white;
+}
 
 #map {
     height: 500px;
 }
 
-.mapEmbed { 
-	box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+.mapEmbed {
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
     border-radius: 50px;
     border: 8px solid $color-coral;
     width: 800px;
@@ -294,27 +333,62 @@ svg {
     margin: auto;
 }
 
-input[type=text] { 
+input[type=text] {
     border-radius: 50px;
     border: 8px solid $color-coral;
-    padding: 10px; 
-    width: 250px;
-    &:focus { 
-	    box-shadow: 0 0 3rem -1rem $color-green;
-    } 
+    padding: 10px;
+    width: 400px;
+    font-size: 35px;
+
+    &:focus {
+        box-shadow: 0 0 3rem -1rem $color-green;
+    }
 }
 
-textarea { 
+textarea {
     border-radius: 30px;
     border: 8px solid $color-coral;
-    padding: 10px; 
+    padding: 10px;
     height: 200px;
     width: 500px;
-    &:focus { 
-	    box-shadow: 0 0 3rem -1rem $color-green;
-    } 
+    font-size: 35px;
+
+    &:focus {
+        box-shadow: 0 0 3rem -1rem $color-green;
+    }
 }
 
-#minecraftMenu {
+.menu {
     margin-bottom: 40px;
+}
+
+input[type="radio"] {
+    /* remove standard background appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* create custom radiobutton appearance */
+    width: 40px;
+    height: 40px;
+    padding: 6px;
+    /* background-color only for content */
+    background-clip: content-box;
+    border: 2px solid $color-coral;
+    background-color: $color-coral;
+    border-radius: 50%;
+    color: $color-coral;
+}
+
+/* appearance for checked radiobutton */
+input[type="radio"]:checked {
+    background-color: $color-green;
+}
+
+
+.radio-item {
+    color: $color-coral;
+
+    label {
+        font-size: 40px;
+    }
 }

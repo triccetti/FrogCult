@@ -46,13 +46,12 @@
 
 	<!------------------------------------ MINECRAFT  ------------------------------------->
 	<div id="minecraft" class="center">
-		<ul id="minecraftMenu">
+		<ul class="menu">
 			<li class="card button" onclick="showJoin()">
 				<h3>Join the Server</h3>
 			</li>
 			<li class="card button" onclick="showMap()">
 				<h3>Server Map</h3>
-
 			</li>
 			<li class="card button" onclick="showReport()">
 				<h3>Report</h3>
@@ -65,10 +64,8 @@
 		<div id="join">
 			<p>You are in luck! The server is avaliable for anyone who is a follower on Twitch!</p>
 			<p>THE SERVER IS JAVA ONLY</p>
-
-
-
 		</div>
+
 		<div id="map" class="anim" style="display:none">
 
 			<iframe class="mapEmbed" src="https://map.frogcult.net/" width="60%" height="100%">
@@ -77,7 +74,7 @@
 			</iframe>
 			<div>
 
-				<a class="card button" href="https://map.frogcult.net/">
+				<a class="card button" target="_blank" href="https://map.frogcult.net/">
 					<h3>Go to Site!</h3>
 				</a>
 			</div>
@@ -96,7 +93,7 @@
 				<div id="form-div">
 					<form class="form" id="report">
 
-						<p class="name">
+						<p class="inputBox">
 							<input name="name" type="text" class="feedback-input" placeholder="Name (Optional)"
 								id="reportName" />
 						</p>
@@ -127,7 +124,6 @@
 		</div>
 
 		<div id="howTo">
-
 		</div>
 	</div>
 

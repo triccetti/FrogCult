@@ -4,7 +4,8 @@
   src: url(GoFrog.ttf);
 }
 /* Color Variables */
-html, body {
+html,
+body {
   padding: 10px;
   height: auto;
   width: auto;
@@ -34,6 +35,17 @@ h1 {
   border: 8px solid #DE5A4B;
   transition: all 0.3s ease;
   color: white;
+  border-radius: 50px;
+  display: inline-block;
+  width: 90%;
+  max-width: 20rem;
+  margin: 0.9rem;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+  padding: 10px;
+  position: relative;
 }
 .button:hover {
   border: 8px solid #2c923d;
@@ -228,20 +240,24 @@ svg {
 /* Lazy Load Styles */
 .card-image {
   display: block;
-  min-height: 20rem; /* layout hack */
+  min-height: 20rem;
+  /* layout hack */
   background: #fff center center no-repeat;
   background-size: cover;
-  filter: blur(3px); /* blur the lowres image */
+  filter: blur(3px);
+  /* blur the lowres image */
 }
 
 .card-image > img {
   display: block;
   width: 100%;
-  opacity: 0; /* visually hide the img element */
+  opacity: 0;
+  /* visually hide the img element */
 }
 
 .card-image.is-loaded {
-  filter: none; /* remove the blur on fullres image */
+  filter: none;
+  /* remove the blur on fullres image */
   transition: filter 1s;
 }
 
@@ -326,7 +342,8 @@ input[type=text] {
   border-radius: 50px;
   border: 8px solid #DE5A4B;
   padding: 10px;
-  width: 250px;
+  width: 400px;
+  font-size: 35px;
 }
 input[type=text]:focus {
   box-shadow: 0 0 3rem -1rem #2c923d;
@@ -338,13 +355,43 @@ textarea {
   padding: 10px;
   height: 200px;
   width: 500px;
+  font-size: 35px;
 }
 textarea:focus {
   box-shadow: 0 0 3rem -1rem #2c923d;
 }
 
-#minecraftMenu {
+.menu {
   margin-bottom: 40px;
+}
+
+input[type=radio] {
+  /* remove standard background appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* create custom radiobutton appearance */
+  width: 40px;
+  height: 40px;
+  padding: 6px;
+  /* background-color only for content */
+  background-clip: content-box;
+  border: 2px solid #DE5A4B;
+  background-color: #DE5A4B;
+  border-radius: 50%;
+  color: #DE5A4B;
+}
+
+/* appearance for checked radiobutton */
+input[type=radio]:checked {
+  background-color: #2c923d;
+}
+
+.radio-item {
+  color: #DE5A4B;
+}
+.radio-item label {
+  font-size: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

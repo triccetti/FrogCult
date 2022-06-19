@@ -35,6 +35,10 @@ function lazyLoad() {
 	});
 }
 
+function showCommissionForm() {
+    document.getElementById('commissionForm').style.display = ''; 
+}
+
 function showMap() { 
     document.getElementById('map').style.display = ''; 
     document.getElementById('join').style.display = 'none'; 
@@ -59,6 +63,7 @@ function showForm() {
     document.getElementById('form-div').style.display=''; 
     document.getElementById('reportSuccess').style.display='none';
 }
+
 
 function sendMinecraftReport() { 
     var name = document.getElementById('reportName').value;
