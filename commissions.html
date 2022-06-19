@@ -44,7 +44,7 @@
 
 	<!------------------------------------ COMMISSIONS ------------------------------------->
 	<div id="Commission " class="center">
-		<div class="card button center" onclick="showCommissionForm()" style="width:100%">
+		<div id="CommisionLink" class="card button center" onclick="showCommissionForm()" style="width:100%">
 			<h3>Commission Me!</h3>
 		</div>
 
@@ -62,8 +62,8 @@
 			</ul>
 		</div>
 
-		<div class="commissionForm" style="display:none;">
-			<h2>Commission Request Form</h2>
+		<div id="commissionForm" style="display:none;">
+			<h2 class="title">Commission Request Form</h2>
 			<p class="inputBox">
 				<input name="name" type="text" class="feedback-input" placeholder="Name" id="commissionName" />
 			</p> 
@@ -86,10 +86,17 @@
 				<textarea name="text" class="validate[required,length[6,300]] feedback-input"
 					id="details" placeholder="Commission Details"></textarea>
 			</p>
-				 
+			<div class="submit button" onclick="showCommissionMenu()" style="width:700px">
+				<h3>Cancel</h3>
+			</div>	 
 			<div class="submit button" onclick="submitCommissionRequest()" style="width:700px">
 				<h3>Submit Commission Request</h3>
 			</div>
+		</div>
+
+		<div id="portfolio">
+			
+
 		</div>
 	</div>
 
