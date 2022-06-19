@@ -79,7 +79,7 @@
 
 		<div id="minecraft" class="center" style="display:none">
 			<ul>
-				<li class="card button">
+				<li class="card button" onclick="showJoin()">
 					<h3>Join the Server</h3>
 				</li>
 				<li class="card button" onclick="showMap()">
@@ -94,10 +94,30 @@
 				</li>
 			</ul>
 
-			<div id="map" class="anim" style="display:none">
-				<iframe src="https://map.frogcult.net/" width="60%" height="500px">
-					<p>Your browser does not support iframes.</p>
+			<div id="join">
+				<p>You are in luck! The server is avaliable for anyone who is a follower on Twitch!</p>
+				<p>THE SERVER IS JAVA ONLY</p>
+
+				<iframe src="https://discord.com/widget?id=655684922731659294&theme=dark" width="350" height="500"
+				 allowtransparency="true" frameborder="0"
+				  sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
 				</iframe>
+			</div>
+			<div id="map" class="anim" style="display:none">
+				
+				<iframe class="mapEmbed" src="https://map.frogcult.net/" width="60%" height="100%">
+					<p>Your browser does not support iframes.</p>
+					
+				</iframe>
+				<div>
+
+				<a class="card button" href="https://map.frogcult.net/">
+					<h3>Go to Site!</h3>
+				</a></div>
+				
+				<img class="leaf" src="assets/slowLeaves.gif" style="left: 55%; top:50%; transform: rotate(100deg); z-index: -10;"/>
+				<img class="leaf" src="assets/slowLeaves.gif" style="left: 20%; top:20%; transform: rotate(290deg); z-index: -10;"/>
+			
 			</div>
 		</div>
 

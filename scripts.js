@@ -45,8 +45,12 @@ function showMinecraft() {
     document.getElementById('main').style.display = 'none'; 
 }
 
-function showMap() {
-    
+function showMap() { 
     document.getElementById('map').style.display = ''; 
+    document.getElementById('join').style.display = 'none'; 
 }
 
+function showJoin() { 
+    document.getElementById('join').style.display = ''; 
+    document.getElementById('map').style.display = 'none'; 
+}

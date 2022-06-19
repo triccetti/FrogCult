@@ -297,4 +297,15 @@ svg {
   color: white;
 }
 
+#map {
+  height: 500px;
+}
+
+.mapEmbed {
+  box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+  border-radius: 50px;
+  border: 8px solid #DE5A4B;
+  width: 800px;
+}
+
 /*# sourceMappingURL=style.css.map */
