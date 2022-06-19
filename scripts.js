@@ -67,6 +67,10 @@ function showReport() {
 }
 
 
+function showForm() { 
+    document.getElementById('form-div').style.display=''; 
+    document.getElementById('reportSuccess').style.display='none';
+}
 
 function sendMinecraftReport() { 
     var name = document.getElementById('reportName').value;
@@ -76,8 +80,8 @@ function sendMinecraftReport() {
 
     var issue = document.getElementById('reportIssue').value;
 
-    if(issue === '') {
-        document.getElementById('issueText').display='';
+    if(issue == null || issue == "") {
+        document.getElementById('issueText').style.display='';
     } else {
 
         var report = "Report made by: **" + name + "**\n" +
@@ -86,13 +90,16 @@ function sendMinecraftReport() {
 
 
         const request = new XMLHttpRequest();
-        request.open("POST", discordReportHook); 
+        request.open("POST", discordReportHook, true); 
         request.setRequestHeader('Content-type', 'application/json');
-        request.onreadystatechange = function() {
-            if (request.readyState == XMLHttpRequest.DONE && request.status == 200) {
+ 
+
+        request.onreadystatechange = function() { // Call a function when the state changes.
+            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) { 
                 // successful
                 console.log("success!");
-                document.getElementById('reportSuccess').display='';
+                document.getElementById('reportSuccess').style.display='';
+                document.getElementById('issueText').style.display='none';
             }
         }
         const params = {
@@ -102,7 +109,15 @@ function sendMinecraftReport() {
         } 
         
         request.send(JSON.stringify(params));
+        // after send clear values
+        document.getElementById('reportIssue').value = "";
+        document.getElementById('reportName').value = "";
 
-        
+
+        console.log("success!");
+        document.getElementById('form-div').style.display='none';
+        document.getElementById('issueText').style.display='none';
+        document.getElementById('reportSuccess').style.display='';
     }
 }
+ 

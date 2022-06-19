@@ -56,6 +56,9 @@ h1 {
     }
 } 
 
+#header {
+    margin-top: 100px;
+}
 
 h2 {
     font-weight: lighter;
@@ -79,7 +82,7 @@ h2 {
     text-align: center; 
     align-items: center;
     justify-content: center;   
-    margin: 100px 0px; 
+    margin: 20px; 
 }
 
 /* Social Icon Mixin */
@@ -279,4 +282,39 @@ svg {
     border-radius: 50px;
     border: 8px solid $color-coral;
     width: 800px;
+}
+
+#issueText {
+    color: $color-coral;
+    padding: 0;
+}
+
+.form {
+    width: 50%;
+    margin: auto;
+}
+
+input[type=text] { 
+    border-radius: 50px;
+    border: 8px solid $color-coral;
+    padding: 10px; 
+    width: 250px;
+    &:focus { 
+	    box-shadow: 0 0 3rem -1rem $color-green;
+    } 
+}
+
+textarea { 
+    border-radius: 30px;
+    border: 8px solid $color-coral;
+    padding: 10px; 
+    height: 200px;
+    width: 500px;
+    &:focus { 
+	    box-shadow: 0 0 3rem -1rem $color-green;
+    } 
+}
+
+#minecraftMenu {
+    margin-bottom: 40px;
 }
