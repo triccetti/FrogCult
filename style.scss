@@ -58,7 +58,6 @@ h1 {
     overflow: hidden;
     box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
     transition: transform 0.1s ease-in-out, box-shadow 0.1s;
-    padding: 10px;
     position: relative;
 
 
@@ -394,5 +393,36 @@ input[type="radio"]:checked {
 
     label {
         font-size: 40px;
+    }
+}
+
+.portfolioImage {
+    width: 500px;
+    display: inline-block;
+    margin: 20px;
+}
+
+#portfolio {
+
+    color: white;
+    border: 8px solid $color-coral;
+    background-color: $color-light-coral;
+    border-radius: 50px;
+    display: inline-block;
+    width: 70%; 
+    max-height: 600px;
+    margin: 0.9rem;
+    text-decoration: none;
+    overflow: scroll;
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s; 
+    position: relative;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+
+    p {
+        margin-top: 20px;
+        font-size: 90px;
     }
 }

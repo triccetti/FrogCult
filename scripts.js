@@ -7,6 +7,8 @@ window.addEventListener('load', function () {
     // setTimeout to simulate the delay from a real page load
     setTimeout(lazyLoad, 10);
 
+    loadPortfolio();
+
 });
 
 const discordReportHook = "https://discord.com/api/webhooks/988160587173363762/PwmMGa7Casg8BjDVSKUZCfAF8_IEVJQaWmdDU3Scr7oZzZtHpKGcvYHE6efJJJHv5sGd";
@@ -35,6 +37,22 @@ function lazyLoad() {
     });
 }
 
+function loadPortfolio() { 
+    var dir = "assets/portfolio/";
+    var files = ["purrl.png", "peanut.png", "kirby.png", "TenaciousD.PNG", "kirb.png"];
+    var photoHtml = document.getElementById('photos');
+    var i = 0;
+    files.forEach(photo => {
+
+        var elem = document.createElement("img");
+        elem.setAttribute("src", dir + photo);
+        elem.setAttribute("class", "portfolioImage");  
+        elem.setAttribute("alt", i++);
+        photoHtml.appendChild(elem);
+    });
+
+}
+
 function showCommissionForm() {
     document.getElementById('commissionForm').style.display = '';
     document.getElementById('CommisionLink').style.display = 'none';
@@ -43,7 +61,7 @@ function showCommissionForm() {
 
 
 function showCommissionMenu() {
-    document.getElementById('Commissions').style.display = ''; 
+    document.getElementById('Commissions').style.display = '';
     document.getElementById('CommisionLink').style.display = '';
     document.getElementById('commissionForm').style.display = 'none';
 }
