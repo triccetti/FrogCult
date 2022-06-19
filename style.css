@@ -1,21 +1,74 @@
 /* Demo */
+@font-face {
+  font-family: FrogFont;
+  src: url(GoFrog.ttf);
+}
+/* Color Variables */
+html, body {
+  padding: 10px;
+  height: auto;
+  width: auto;
+}
+
 body {
+  background-image: url(assets/rm422-047.jpg);
+  font-family: FrogFont;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 72px;
+  display: inline;
+  color: white;
+  border-radius: 35px;
+  box-shadow: 0px 0px 3px;
+  border: 8px solid #DE5A4B;
+  background-color: #F5A8A4;
+  padding: 5px 25px;
+}
+
+.button {
+  cursor: pointer;
+  background-color: #F5A8A4;
+  border: 8px solid #DE5A4B;
+  transition: all 0.3s ease;
+  color: white;
+}
+.button:hover {
+  border: 8px solid #2c923d;
+  background-color: #AFF8A0;
+  color: #2c923d;
+}
+
+h2 {
+  font-weight: lighter;
+  color: #2c923d;
+  padding: 10px 25px;
+  margin: 10px;
+}
+
+.bottom {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-}
-
-footer {
   position: fixed;
-  bottom: 20px;
+  width: 100%;
+  z-index: 1;
+  bottom: 50px;
 }
 
-/* Color Variables */
+.center {
+  height: 95%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 100px 0px;
+}
+
 /* Social Icon Mixin */
 svg {
   position: absolute;
-  z-layer: -1;
 }
 
 /* Social Icons */
@@ -33,106 +86,105 @@ svg {
   margin: 0 0.5rem;
   border-radius: 50%;
   cursor: pointer;
-  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: FrogFont;
   font-size: 2.5rem;
   text-decoration: none;
   transition: all 0.15s ease;
 }
 .social-icon:hover {
   color: #fff;
+  text-decoration: none;
 }
 .social-icon:hover .tooltip {
   visibility: visible;
   opacity: 1;
   transform: translate(-50%, -150%);
 }
-.social-icon:active {
-  border-radius: 150px;
-}
 .social-icon:active svg {
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3));
 }
 .social-icon--discord {
   color: #fff;
 }
 .social-icon--discord .cls-1 {
-  fill: #7289da;
+  fill: #2c923d;
 }
 .social-icon--discord .tooltip {
-  background: #7289da;
+  background: #2c923d;
   color: currentColor;
 }
 .social-icon--discord .tooltip:after {
-  border-top-color: #7289da;
+  border-top-color: #2c923d;
 }
 .social-icon--twitter {
   color: #fff;
 }
 .social-icon--twitter .cls-1 {
-  fill: #1DA1F2;
+  fill: #2c923d;
 }
 .social-icon--twitter .tooltip {
-  background: #1DA1F2;
+  background: #2c923d;
   color: currentColor;
 }
 .social-icon--twitter .tooltip:after {
-  border-top-color: #1DA1F2;
+  border-top-color: #2c923d;
 }
 .social-icon--twitch {
   color: #fff;
 }
 .social-icon--twitch .cls-1 {
-  fill: #6441a5;
+  fill: #2c923d;
 }
 .social-icon--twitch .tooltip {
-  background: #6441a5;
+  background: #2c923d;
   color: currentColor;
 }
 .social-icon--twitch .tooltip:after {
-  border-top-color: #6441a5;
+  border-top-color: #2c923d;
 }
 .social-icon--tiktok {
   color: #fff;
 }
 .social-icon--tiktok .cls-1 {
-  fill: #ff0050;
+  fill: #2c923d;
 }
 .social-icon--tiktok .tooltip {
-  background: #ff0050;
+  background: #2c923d;
   color: currentColor;
 }
 .social-icon--tiktok .tooltip:after {
-  border-top-color: #ff0050;
+  border-top-color: #2c923d;
 }
 .social-icon--instagram {
   color: #fff;
 }
 .social-icon--instagram .cls-1 {
-  fill: #405DE6;
+  fill: #2c923d;
 }
 .social-icon--instagram .tooltip {
-  background: #405DE6;
+  background: #2c923d;
   color: currentColor;
 }
 .social-icon--instagram .tooltip:after {
-  border-top-color: #405DE6;
+  border-top-color: #2c923d;
 }
 .social-icon--youtube {
   color: #fff;
 }
 .social-icon--youtube .cls-1 {
-  fill: #FF0000;
+  fill: #2c923d;
 }
 .social-icon--youtube .tooltip {
-  background: #FF0000;
+  background: #2c923d;
   color: currentColor;
 }
 .social-icon--youtube .tooltip:after {
-  border-top-color: #FF0000;
+  border-top-color: #2c923d;
 }
 .social-icon i {
   position: relative;
-  top: 1px;
+  top: 5px;
   z-index: 1;
 }
 
@@ -144,7 +196,8 @@ svg {
   left: 50%;
   padding: 0.8rem 1rem;
   border-radius: 40px;
-  font-size: 0.8rem;
+  font-family: FrogFont;
+  font-size: 1.75rem;
   font-weight: bold;
   opacity: 0;
   pointer-events: none;
@@ -165,6 +218,83 @@ svg {
   border-width: 10px 10px 0 10px;
   border-color: transparent;
   transform: translate(-50%, 100%);
+}
+
+/* App */
+/* Lazy Load Styles */
+.card-image {
+  display: block;
+  min-height: 20rem; /* layout hack */
+  background: #fff center center no-repeat;
+  background-size: cover;
+  filter: blur(3px); /* blur the lowres image */
+}
+
+.card-image > img {
+  display: block;
+  width: 100%;
+  opacity: 0; /* visually hide the img element */
+}
+
+.card-image.is-loaded {
+  filter: none; /* remove the blur on fullres image */
+  transition: filter 1s;
+}
+
+/* Card Styles */
+.card-list {
+  display: block;
+  margin: 1rem auto;
+  padding: 0;
+  font-size: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.card {
+  color: white;
+  border: 8px solid #DE5A4B;
+  background-color: #F5A8A4;
+  border-radius: 50px;
+  display: inline-block;
+  width: 90%;
+  max-width: 20rem;
+  margin: 0.9rem;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+  position: relative;
+}
+.card a {
+  text-decoration: none;
+}
+.card h3 {
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+}
+.card p {
+  font-size: 1.3rem;
+}
+.card img {
+  height: 350px;
+}
+
+.card:hover {
+  transform: translateY(-0.5rem) scale(1.0125);
+  box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
+}
+
+.card-description {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+}
+
+.leaf {
+  transition: all 0.15s ease;
+  position: fixed;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

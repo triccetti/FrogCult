@@ -1,50 +1,114 @@
 /* Demo */
-body {
+@font-face {
+    font-family: FrogFont;
+    src: url(GoFrog.ttf);
+}
+
+/* Color Variables */
+$color-discord: #7289da; 
+$color-twitch: #6441a5;
+$color-twitter: #1DA1F2;
+$color-tiktok: #ff0050;
+$color-instagram: #405DE6;  
+$color-youtube: #FF0000;
+
+$color-light-green: #AFF8A0;
+$color-green: #2c923d;
+$color-light-coral: #F5A8A4;
+$color-coral: #DE5A4B;
+  
+
+html, body { 
+    padding: 10px; 
+    height: auto;
+    width: auto
+}
+
+body {  
+    background-image: url(assets/rm422-047.jpg);
+    font-family: FrogFont;
+    align-items: center;
+    justify-content: center; 
+}
+
+h1 {
+    font-size: 72px;
+    display: inline; 
+    color: white;
+    border-radius: 35px;
+    box-shadow: 0px 0px 3px ;
+    border: 8px solid $color-coral;
+    background-color: $color-light-coral;
+    padding: 5px 25px;   
+}
+
+.button {
+    cursor: pointer;
+    background-color: $color-light-coral;
+    border: 8px solid $color-coral; 
+    transition: all 0.3s ease;
+    color: white;
+
+    &:hover { 
+        border: 8px solid $color-green;
+        background-color: $color-light-green;
+        color: $color-green;
+    }
+} 
+
+
+h2 {
+    font-weight: lighter;
+    color: $color-green;
+    padding: 10px 25px;
+    margin: 10px;
+}
+
+.bottom { 
     display: flex;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh; 
-  }
-  footer { 
+    justify-content: center; 
     position: fixed; 
-    bottom: 20px;
-  }
-  
-  /* Color Variables */
-  $color-discord: #7289da; 
-  $color-twitch: #6441a5;
-  $color-twitter: #1DA1F2;
-  $color-tiktok: #ff0050;
-  $color-instagram: #405DE6;  
-  $color-youtube: #FF0000;
-  /* Social Icon Mixin */
-  @mixin social-icon($color) {
+    width: 100%;
+    z-index: 1;
+    bottom: 50px;
+}
+
+.center {
+    height: 95%;
+    text-align: center; 
+    align-items: center;
+    justify-content: center;   
+    margin: 100px 0px; 
+}
+
+/* Social Icon Mixin */
+@mixin social-icon($color) {
     color: #fff;
-    
+
     .cls-1{
-      fill:$color;
+        fill:$color;
     }
     .tooltip {
-      background: $color;
-      color: currentColor;
-  
-      &:after {
-        border-top-color: $color;
-      }
+        background: $color;
+        color: currentColor;
+
+        &:after {
+            border-top-color: $color;
+        }
     }
-  }
+}
   
-  svg {
-    position: absolute;
-    z-layer: -1;
-  }
+svg {
+    position: absolute; 
+}
   
-  /* Social Icons */
-  .social-icons {
+/* Social Icons */
+.social-icons {
     display: flex;
-  }
-  
-  .social-icon {
+}
+
+.social-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,52 +118,53 @@ body {
     margin: 0 0.5rem;
     border-radius: 50%;
     cursor: pointer;
-    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: FrogFont;
     font-size: 2.5rem;
     text-decoration: none;
     transition: all 0.15s ease;
-  
+
     &:hover {
-      color: #fff;
-  
-      .tooltip {
-        visibility: visible;
-        opacity: 1;
-        transform: translate(-50%, -150%);
-      }
+        color: #fff; 
+        text-decoration: none;
+        
+        .tooltip {
+            visibility: visible;
+            opacity: 1;
+            transform: translate(-50%, -150%);
+        }
     }
-      
+        
     &:active {
-      
-      border-radius: 150px;
-      svg {
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5) ;
-      }
+        svg {  
+            -webkit-filter: drop-shadow( 0px 0px 2px rgba(0, 0, 0, .3));
+            filter: drop-shadow( 0px 0px 2px rgba(0, 0, 0, .3)); 
+        }
     }
-    
-    &--discord { @include social-icon($color-discord); }
-    &--twitter { @include social-icon($color-twitter); }
-    &--twitch { @include social-icon($color-twitch); }
-    &--tiktok { @include social-icon($color-tiktok); }
-    &--instagram { @include social-icon($color-instagram); }
-    &--youtube { @include social-icon($color-youtube); }
-    
+
+    &--discord { @include social-icon($color-green); }
+    &--twitter { @include social-icon($color-green); }
+    &--twitch { @include social-icon($color-green); }
+    &--tiktok { @include social-icon($color-green); }
+    &--instagram { @include social-icon($color-green); }
+    &--youtube { @include social-icon($color-green); }
+
     i {
-      position: relative;
-      top: 1px;    
-      z-index: 1;
+        position: relative;
+        top: 5px;    
+        z-index: 1;
     }
-  }
+}
   
-  /* Tooltips */
-  .tooltip {
+/* Tooltips */
+.tooltip {
     display: block;
     position: absolute;
     top: 0;
     left: 50%;
     padding: 0.8rem 1rem;
     border-radius: 40px;
-    font-size: 0.8rem;
+    font-family: FrogFont;
+    font-size: 1.75rem;
     font-weight: bold;
     opacity: 0;
     pointer-events: none;
@@ -107,18 +172,100 @@ body {
     transform: translate(-50%, -100%);
     transition: all 0.3s ease;
     z-index: 1;
-    
+
     &:after {
-      display: block;
-      position: absolute;
-      bottom: 1px;
-      left: 50%;
-      width: 0;
-      height: 0;
-      content: "";
-      border: solid;
-      border-width: 10px 10px 0 10px;
-      border-color: transparent;
-      transform: translate(-50%, 100%);
+        display: block;
+        position: absolute;
+        bottom: 1px;
+        left: 50%;
+        width: 0;
+        height: 0;
+        content: "";
+        border: solid;
+        border-width: 10px 10px 0 10px;
+        border-color: transparent;
+        transform: translate(-50%, 100%);
     }
-  }
+}
+
+/* App */
+/* Lazy Load Styles */
+.card-image {
+	display: block;
+	min-height: 20rem; /* layout hack */
+	background: #fff center center no-repeat;
+	background-size: cover;
+	filter: blur(3px); /* blur the lowres image */
+}
+
+.card-image > img {
+	display: block;
+	width: 100%;
+	opacity: 0; /* visually hide the img element */
+}
+
+.card-image.is-loaded {
+	filter: none; /* remove the blur on fullres image */
+	transition: filter 1s;
+} 
+
+/* Card Styles */  
+.card-list {
+	display: block;
+	margin: 1rem auto;
+	padding: 0;
+	font-size: 0;
+	text-align: center;
+	list-style: none;
+
+    
+}
+
+.card {
+    color: white; 
+    border: 8px solid $color-coral;
+    background-color: $color-light-coral;
+    border-radius: 50px;
+	display: inline-block;
+	width: 90%;
+	max-width: 20rem;
+	margin: 0.9rem; 
+	text-decoration: none;
+	overflow: hidden;
+	box-shadow: 0 0 3rem -1rem rgba(0,0,0,0.5);
+	transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+
+    position: relative;  
+
+    a {
+        text-decoration: none;
+    }
+    h3{
+        font-size: 2.5rem; 
+        margin-top: 0.5rem;
+    }
+    p {
+        font-size: 1.3rem; 
+    }
+    img { 
+        height: 350px;
+    }
+}
+
+.card:hover {
+	transform: translateY(-0.5rem) scale(1.0125);
+	box-shadow: 0 0.5em 3rem -1rem rgba(0,0,0,0.5);
+}
+
+.card-description {
+	display: block;
+	padding: 1em; 
+	text-decoration: none;
+}
+ 
+
+.leaf {    
+    transition: all 0.15s ease;  
+    position: fixed; 
+    color:white; 
+} 
