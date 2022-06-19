@@ -9,6 +9,8 @@ window.addEventListener('load', function() {
 	
 });
 
+const discordReportHook = "https://discord.com/api/webhooks/988160587173363762/PwmMGa7Casg8BjDVSKUZCfAF8_IEVJQaWmdDU3Scr7oZzZtHpKGcvYHE6efJJJHv5sGd";
+
 function lazyLoad() {
 	var card_images = document.querySelectorAll('.card-image');
 	
@@ -53,4 +55,20 @@ function showMap() {
 function showJoin() { 
     document.getElementById('join').style.display = ''; 
     document.getElementById('map').style.display = 'none'; 
+}
+
+
+function sendMinecraftReport() {
+    const request = new XMLHttpRequest();
+    request.open("POST", discordReportHook); 
+    request.setRequestHeader('Content-type', 'application/json');
+
+    const params = {
+        username: "Frog Cult Complaint Bot",
+        avatar_url: "",
+        content: "Test minecraft report1"
+    }
+    
+    request.send(JSON.stringify(params));
+
 }
