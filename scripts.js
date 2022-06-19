@@ -45,3 +45,8 @@ function showMinecraft() {
     document.getElementById('main').style.display = 'none'; 
 }
 
+function showMap() {
+    
+    document.getElementById('map').style.display = ''; 
+}
+
