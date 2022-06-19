@@ -35,18 +35,6 @@ function lazyLoad() {
 	});
 }
 
-function showMain() {; 
-    document.getElementById('main').style.display = ''; 
-
-    document.getElementById('minecraft').style.display = 'none'
-}
-
-function showMinecraft() {
-    document.getElementById('minecraft').style.display = ''; 
-    
-    document.getElementById('main').style.display = 'none'; 
-}
-
 function showMap() { 
     document.getElementById('map').style.display = ''; 
     document.getElementById('join').style.display = 'none'; 
