@@ -15,7 +15,6 @@ body {
   font-family: FrogFont;
   align-items: center;
   justify-content: center;
-  max-height: min-content;
 }
 
 h1 {
@@ -82,127 +81,6 @@ h2 {
 }
 
 /* Social Icon Mixin */
-svg {
-  position: absolute;
-}
-
-/* Social Icons */
-.social-icons {
-  display: flex;
-}
-
-.social-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  width: 80px;
-  height: 80px;
-  margin: 0 0.5rem;
-  border-radius: 50%;
-  cursor: pointer;
-  font-family: FrogFont;
-  font-size: 2.5rem;
-  text-decoration: none;
-  transition: all 0.15s ease;
-}
-.social-icon:hover {
-  color: #fff;
-  text-decoration: none;
-}
-.social-icon:hover .tooltip {
-  visibility: visible;
-  opacity: 1;
-  transform: translate(-50%, -150%);
-}
-.social-icon:active svg {
-  -webkit-filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3));
-  filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3));
-}
-.social-icon--discord {
-  color: #fff;
-}
-.social-icon--discord .cls-1 {
-  fill: #2c923d;
-}
-.social-icon--discord .tooltip {
-  background: #2c923d;
-  color: currentColor;
-}
-.social-icon--discord .tooltip:after {
-  border-top-color: #2c923d;
-}
-.social-icon--twitter {
-  color: #fff;
-}
-.social-icon--twitter .cls-1 {
-  fill: #2c923d;
-}
-.social-icon--twitter .tooltip {
-  background: #2c923d;
-  color: currentColor;
-}
-.social-icon--twitter .tooltip:after {
-  border-top-color: #2c923d;
-}
-.social-icon--twitch {
-  color: #fff;
-}
-.social-icon--twitch .cls-1 {
-  fill: #2c923d;
-}
-.social-icon--twitch .tooltip {
-  background: #2c923d;
-  color: currentColor;
-}
-.social-icon--twitch .tooltip:after {
-  border-top-color: #2c923d;
-}
-.social-icon--tiktok {
-  color: #fff;
-}
-.social-icon--tiktok .cls-1 {
-  fill: #2c923d;
-}
-.social-icon--tiktok .tooltip {
-  background: #2c923d;
-  color: currentColor;
-}
-.social-icon--tiktok .tooltip:after {
-  border-top-color: #2c923d;
-}
-.social-icon--instagram {
-  color: #fff;
-}
-.social-icon--instagram .cls-1 {
-  fill: #2c923d;
-}
-.social-icon--instagram .tooltip {
-  background: #2c923d;
-  color: currentColor;
-}
-.social-icon--instagram .tooltip:after {
-  border-top-color: #2c923d;
-}
-.social-icon--youtube {
-  color: #fff;
-}
-.social-icon--youtube .cls-1 {
-  fill: #2c923d;
-}
-.social-icon--youtube .tooltip {
-  background: #2c923d;
-  color: currentColor;
-}
-.social-icon--youtube .tooltip:after {
-  border-top-color: #2c923d;
-}
-.social-icon i {
-  position: relative;
-  top: 5px;
-  z-index: 1;
-}
-
 /* Tooltips */
 .tooltip {
   display: block;
@@ -317,15 +195,13 @@ svg {
   color: white;
 }
 
-#map {
-  height: 500px;
-}
-
 .mapEmbed {
   box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
   border-radius: 50px;
   border: 8px solid #DE5A4B;
-  width: 800px;
+  width: 80%;
+  max-width: 880px;
+  min-height: 500px;
 }
 
 #issueText {
@@ -338,14 +214,16 @@ svg {
   margin: auto;
 }
 
-input[type=text], input[type=email] {
+input[type=text],
+input[type=email] {
   border-radius: 50px;
   border: 8px solid #DE5A4B;
   padding: 10px;
   width: 400px;
   font-size: 35px;
 }
-input[type=text]:focus, input[type=email]:focus {
+input[type=text]:focus,
+input[type=email]:focus {
   box-shadow: 0 0 3rem -1rem #2c923d;
 }
 
@@ -371,6 +249,8 @@ textarea:focus {
 
 .menu {
   margin-bottom: 40px;
+  padding: 0;
+  -webkit-padding-start: 0;
 }
 
 input[type=radio] {
@@ -465,37 +345,6 @@ input[type=radio]:checked {
   font-size: 1.5rem;
 }
 
-.bold {
-  font-weight: bold;
-}
-
-.bullet {
-  font-size: 2rem;
-  color: #2c923d;
-}
-.bullet a {
-  text-decoration: none;
-  color: #DE5A4B;
-}
-
-#join {
-  max-height: 550px;
-  max-width: 55%;
-  overflow: scroll;
-  overflow-x: hidden;
-  margin: 10px auto;
-  padding: 15px;
-}
-#join h1 {
-  font-size: 3rem;
-}
-#join img {
-  width: 600px;
-}
-#join .num {
-  font-size: 3rem;
-}
-
 #tosCheck {
   font-weight: 2rem;
 }
@@ -510,6 +359,407 @@ button {
   vertical-align: top;
   text-align: left;
   padding: 10px;
+}
+
+/* Social Buttons */
+/*Large screens */
+@media (min-width: 590px) {
+  .social-icons {
+    display: flex;
+  }
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-family: FrogFont;
+    font-size: 2.5rem;
+    text-decoration: none;
+    transition: all 0.15s ease;
+  }
+  .social-icon:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  .social-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -150%);
+  }
+  .social-icon:active svg {
+    -webkit-filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3));
+  }
+  .social-icon--discord {
+    color: #fff;
+  }
+  .social-icon--discord .cls-1 {
+    fill: #2c923d;
+  }
+  .social-icon--discord .tooltip {
+    background: #2c923d;
+    color: currentColor;
+  }
+  .social-icon--discord .tooltip:after {
+    border-top-color: #2c923d;
+  }
+  .social-icon--twitter {
+    color: #fff;
+  }
+  .social-icon--twitter .cls-1 {
+    fill: #2c923d;
+  }
+  .social-icon--twitter .tooltip {
+    background: #2c923d;
+    color: currentColor;
+  }
+  .social-icon--twitter .tooltip:after {
+    border-top-color: #2c923d;
+  }
+  .social-icon--twitch {
+    color: #fff;
+  }
+  .social-icon--twitch .cls-1 {
+    fill: #2c923d;
+  }
+  .social-icon--twitch .tooltip {
+    background: #2c923d;
+    color: currentColor;
+  }
+  .social-icon--twitch .tooltip:after {
+    border-top-color: #2c923d;
+  }
+  .social-icon--tiktok {
+    color: #fff;
+  }
+  .social-icon--tiktok .cls-1 {
+    fill: #2c923d;
+  }
+  .social-icon--tiktok .tooltip {
+    background: #2c923d;
+    color: currentColor;
+  }
+  .social-icon--tiktok .tooltip:after {
+    border-top-color: #2c923d;
+  }
+  .social-icon--instagram {
+    color: #fff;
+  }
+  .social-icon--instagram .cls-1 {
+    fill: #2c923d;
+  }
+  .social-icon--instagram .tooltip {
+    background: #2c923d;
+    color: currentColor;
+  }
+  .social-icon--instagram .tooltip:after {
+    border-top-color: #2c923d;
+  }
+  .social-icon--youtube {
+    color: #fff;
+  }
+  .social-icon--youtube .cls-1 {
+    fill: #2c923d;
+  }
+  .social-icon--youtube .tooltip {
+    background: #2c923d;
+    color: currentColor;
+  }
+  .social-icon--youtube .tooltip:after {
+    border-top-color: #2c923d;
+  }
+  .social-icon i {
+    position: relative;
+    top: 5px;
+    z-index: 1;
+  }
+  svg {
+    position: absolute;
+  }
+}
+@media (max-width: 589.98px) {
+  .social-icons {
+    display: flex;
+  }
+  .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-family: FrogFont;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: all 0.15s ease;
+  }
+  .social-icon:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  .social-icon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -150%);
+  }
+  .social-icon:active svg {
+    -webkit-filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3));
+  }
+  .social-icon--discord {
+    color: #fff;
+  }
+  .social-icon--discord .cls-1 {
+    fill: #2c923d;
+  }
+  .social-icon--discord .tooltip {
+    background: #2c923d;
+    color: currentColor;
+  }
+  .social-icon--discord .tooltip:after {
+    border-top-color: #2c923d;
+  }
+  .social-icon--twitter {
+    color: #fff;
+  }
+  .social-icon--twitter .cls-1 {
+    fill: #2c923d;
+  }
+  .social-icon--twitter .tooltip {
+    background: #2c923d;
+    color: currentColor;
+  }
+  .social-icon--twitter .tooltip:after {
+    border-top-color: #2c923d;
+  }
+  .social-icon--twitch {
+    color: #fff;
+  }
+  .social-icon--twitch .cls-1 {
+    fill: #2c923d;
+  }
+  .social-icon--twitch .tooltip {
+    background: #2c923d;
+    color: currentColor;
+  }
+  .social-icon--twitch .tooltip:after {
+    border-top-color: #2c923d;
+  }
+  .social-icon--tiktok {
+    color: #fff;
+  }
+  .social-icon--tiktok .cls-1 {
+    fill: #2c923d;
+  }
+  .social-icon--tiktok .tooltip {
+    background: #2c923d;
+    color: currentColor;
+  }
+  .social-icon--tiktok .tooltip:after {
+    border-top-color: #2c923d;
+  }
+  .social-icon--instagram {
+    color: #fff;
+  }
+  .social-icon--instagram .cls-1 {
+    fill: #2c923d;
+  }
+  .social-icon--instagram .tooltip {
+    background: #2c923d;
+    color: currentColor;
+  }
+  .social-icon--instagram .tooltip:after {
+    border-top-color: #2c923d;
+  }
+  .social-icon--youtube {
+    color: #fff;
+  }
+  .social-icon--youtube .cls-1 {
+    fill: #2c923d;
+  }
+  .social-icon--youtube .tooltip {
+    background: #2c923d;
+    color: currentColor;
+  }
+  .social-icon--youtube .tooltip:after {
+    border-top-color: #2c923d;
+  }
+  .social-icon i {
+    position: relative;
+    top: 3px;
+    z-index: 1;
+  }
+  svg {
+    position: absolute;
+    max-height: 40px;
+  }
+}
+/* Minecraft Join Instructions */
+/* Large Screen */
+@media (min-width: 1200px) {
+  #join {
+    max-height: 550px;
+    max-width: 75%;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin: 10px auto;
+    padding: 15px;
+  }
+  #join h1 {
+    font-size: 3rem;
+  }
+  #join img {
+    width: 600px;
+  }
+  #join .num {
+    font-size: 3rem;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  .bullet {
+    font-size: 2rem;
+    color: #2c923d;
+  }
+  .bullet a {
+    text-decoration: none;
+    color: #DE5A4B;
+  }
+}
+/* Large Screen */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #join {
+    max-height: 500px;
+    max-width: 65%;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin: 5px auto;
+    padding: 15px;
+  }
+  #join h1 {
+    font-size: 2.5rem;
+  }
+  #join img {
+    width: 550px;
+  }
+  #join .num {
+    font-size: 2.5rem;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  .bullet {
+    font-size: 1.75rem;
+    color: #2c923d;
+  }
+  .bullet a {
+    text-decoration: none;
+    color: #DE5A4B;
+  }
+}
+/* medium screen */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #join {
+    max-height: 400px;
+    max-width: 95%;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin: 5px auto;
+    padding: 15px;
+  }
+  #join h1 {
+    font-size: 2.5rem;
+  }
+  #join img {
+    width: 400px;
+  }
+  #join .num {
+    font-size: 2.5rem;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  .bullet {
+    font-size: 1.75rem;
+    color: #2c923d;
+  }
+  .bullet a {
+    text-decoration: none;
+    color: #DE5A4B;
+  }
+}
+/* small screen */
+@media (max-width: 767.98px) {
+  #join {
+    max-height: 750px;
+    max-width: 95%;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin: 5px auto;
+    padding-top: 15px;
+  }
+  #join h1 {
+    font-size: 2rem;
+  }
+  #join img {
+    max-width: 400px;
+  }
+  #join .num {
+    font-size: 2.5rem;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  .bullet {
+    font-size: 1.75rem;
+    color: #2c923d;
+  }
+  .bullet a {
+    text-decoration: none;
+    color: #DE5A4B;
+  }
+  .form {
+    width: 95%;
+    margin: auto;
+  }
+  #report {
+    margin: 0;
+  }
+  #report .title {
+    max-width: 80%;
+    margin: auto;
+  }
+  textarea {
+    border-radius: 30px;
+    border: 8px solid #DE5A4B;
+    padding: 10px;
+    height: 200px;
+    max-width: 90%;
+    font-size: 35px;
+  }
+  textarea:focus {
+    box-shadow: 0 0 3rem -1rem #2c923d;
+  }
+  input[type=text],
+input[type=email] {
+    border-radius: 50px;
+    border: 8px solid #DE5A4B;
+    padding: 10px;
+    max-width: 90%;
+    font-size: 35px;
+  }
+  input[type=text]:focus,
+input[type=email]:focus {
+    box-shadow: 0 0 3rem -1rem #2c923d;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -41,6 +41,7 @@ function loadPortfolio() {
     var dir = "assets/portfolio/";
     var files = ["purrl.png", "peanut.png", "kirby.png", "TenaciousD.PNG", "kirb.png"];
     var photoHtml = document.getElementById('photos');
+    if(photoHtml == null) return;
     var i = 0;
     files.forEach(photo => {
 
