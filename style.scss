@@ -191,10 +191,11 @@ h2 {
 a {
     color: $color-green;
     text-decoration: none;
-    &:hover{
+
+    &:hover {
         text-decoration: none;
-        
-    color: $color-light-green;
+
+        color: $color-light-green;
     }
 }
 
@@ -786,7 +787,22 @@ button {
         width: 90%;
     }
 
-    #tos{
+    #tos {
         width: 90%;
     }
+}
+
+
+
+input[type="checkbox"] {
+    width: 40px;
+    height: 40px;
+    background-color: $color-light-green;
+    border-color: $color-green;
+    margin-top: 5px; 
+}
+
+#tosCheck {
+    text-align: center;
+    font-size: 2.5rem;
 }
