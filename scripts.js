@@ -37,7 +37,7 @@ function lazyLoad() {
     });
 }
 
-function loadPortfolio() { 
+function loadPortfolio() {
     var dir = "assets/portfolio/";
     var files = ["purrl.png", "peanut.png", "kirby.png", "TenaciousD.PNG", "kirb.png"];
     var photoHtml = document.getElementById('photos');
@@ -46,7 +46,7 @@ function loadPortfolio() {
 
         var elem = document.createElement("img");
         elem.setAttribute("src", dir + photo);
-        elem.setAttribute("class", "portfolioImage");  
+        elem.setAttribute("class", "portfolioImage");
         elem.setAttribute("alt", i++);
         photoHtml.appendChild(elem);
     });
@@ -102,7 +102,7 @@ function sendMinecraftReport() {
     }
 }
 
-function showCommissionForm() { 
+function showCommissionForm() {
     document.getElementById('portfolio').style.display = 'none';
     document.getElementById('Commissions').style.display = 'none';
     document.getElementById('pricing').style.display = 'none';
@@ -110,7 +110,7 @@ function showCommissionForm() {
 }
 
 function showPortfolio() {
-     
+
     document.getElementById('portfolio').style.display = '';
     document.getElementById('commissionForm').style.display = 'none';
     document.getElementById('pricing').style.display = 'none';
@@ -122,11 +122,10 @@ function showPricing() {
     document.getElementById('portfolio').style.display = 'none';
 }
 
-function showCommissionMenu() { 
+function showCommissionMenu() {
     document.getElementById('portfolio').style.display = '';
     document.getElementById('Commissions').style.display = '';
-    document.getElementById('commissionForm').style.display = 'none';
-
+    document.getElementById('commissionForm').style.display = 'none'; 
 }
 
 function showMap() {
