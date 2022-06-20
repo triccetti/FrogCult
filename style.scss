@@ -20,8 +20,7 @@ $color-coral: #DE5A4B;
 
 html,
 body {
-    padding: 10px;
-    height: auto;
+    padding: 10px; 
     width: auto
 }
 
@@ -30,6 +29,7 @@ body {
     font-family: FrogFont;
     align-items: center;
     justify-content: center;
+    max-height: min-content;
 }
 
 h1 {
@@ -83,11 +83,10 @@ h2 {
 .bottom {
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: fixed;
+    justify-content: center; 
     width: 100%;
-    z-index: 1;
-    bottom: 50px;
+    z-index: 1; 
+    margin-top: 100px;
 }
 
 .center {
@@ -95,6 +94,8 @@ h2 {
     text-align: center;
     align-items: center;
     justify-content: center; 
+    margin: auto;
+    display: block;
 }
 
 /* Social Icon Mixin */
@@ -332,7 +333,7 @@ svg {
     margin: auto;
 }
 
-input[type=text] {
+input[type=text], input[type=email] {
     border-radius: 50px;
     border: 8px solid $color-coral;
     padding: 10px;
@@ -415,7 +416,7 @@ input[type="radio"]:checked {
     border: 8px solid $color-coral;
     background-color: $color-light-coral;
     border-radius: 50px;
-    display: inline-block;
+    display: block;
     width: 50%;  
     text-decoration: none; 
     box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
@@ -501,4 +502,21 @@ input[type="radio"]:checked {
     .num {
         font-size: 3rem;
     }
+}
+
+#tosCheck {
+    font-weight: 2rem;
+
+}
+
+button {  
+    font-size: 2.5rem;
+    margin-top: 0.5rem;
+}
+
+.radioButtons {
+    display: inline-block; 
+    vertical-align: top;  
+    text-align: left; 
+    padding: 10px;
 }

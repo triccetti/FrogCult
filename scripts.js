@@ -102,43 +102,6 @@ function sendMinecraftReport() {
     }
 }
 
-function submitCommissionRequest() {
-    var name = document.getElementById('commissionName').value.trim();
-    var email = document.getElementById('commissionEmail').value.trim();
-    var type = $('input[name="ritem"]:checked').val();
-    var details = document.getElementById('details').value.trim();
-
-    if(name == null || name == '') {
-        document.getElementById('comNameError').style.display = ''
-    }
-
-    if(email == null || email == '') {
-        document.getElementById('comEmailError').style.display = ''
-    }
-
-    if(type == null || type == '') {
-        document.getElementById('typeError').style.display = ''
-    }
-    
-    if(details == null || details == '') {
-        document.getElementById('detailsError').style.display = ''
-    }
-
-    Email.send({
-        "commissions@frogcult.net",
-        "tayloristic7@gmail.com",
-        "Commission Request from " + name ,
-        "Name = " + name + "\n" +
-        "Contact = " + email + "\n" +
-        "Type = " + type + "\n" + 
-        "Details = " + details,
-        "www.frogcult.net", 
-    }).then(
-        message => alert(message)
-      );;
-
-}
-
 function showCommissionForm() { 
     document.getElementById('portfolio').style.display = 'none';
     document.getElementById('Commissions').style.display = 'none';

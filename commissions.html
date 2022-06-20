@@ -31,7 +31,7 @@
 		gtag('config', 'UA-96715828-3');
 	</script>
 
-	<!-- For Emails --> 
+	<!-- For Emails -->
 	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 	<script src="https://smtpjs.com/v2/smtp.js"></script>
 </head>
@@ -42,7 +42,7 @@
 		<a target="_self" href="https://frogcult.net/">
 			<h1 class="button">Frog Cult</h1>
 		</a>
-		<h2>- Tayloristic7 Community -</h2>
+		<h2>- Tayloristic7's Community -</h2>
 	</div>
 
 
@@ -65,39 +65,67 @@
 		</div>
 
 		<div id="commissionForm" style="display:none;">
-			<h2 class="title">Commission Request Form</h2>
-			<p class="inputBox">
-				<input name="name" type="text" class="feedback-input" placeholder="Name" id="commissionName" />
-				<p id="comNameError" style="display:none;"> REQUIRED </p>
-			</p>
-			<p class="inputBox">
-				<input name="name" type="text" class="feedback-input" placeholder="Email or Discord Username"
-					id="commissionEmail" />
-				<p id="comEmailError" style="display:none;"> REQUIRED </p>
-			</p>
 
-			<h2> What type of art? </h2>
-			<p id="typeError" style="display:none;"> REQUIRED </p>
-			<div class="radio-item">
-				<input type="radio" id="ritema" name="ritem" value="Emotes">
-				<label for="ritema">Emotes</label>
-			</div>
-			<div class="radio-item">
-				<input type="radio" id="ritemb" name="ritem" value="Other">
-				<label for="ritemb">Other</label>
-			</div>
-			<p id="detailsError" style="display:none;">Details can not be blank!</p>
-			<p class="text">
-				<p id="detailsError" style="display:none;"> REQUIRED </p>
-				<textarea name="text" class="validate[required,length[6,300]] feedback-input" id="details"
-					placeholder="Commission Details"></textarea>
-			</p>
-			<div class="submit button" onclick="showCommissionMenu()" style="width:700px">
-				<h3>Cancel</h3>
-			</div>
-			<div class="submit button" onclick="submitCommissionRequest()" style="width:700px">
-				<h3>Submit Commission Request</h3>
-			</div>
+			<!-- modify this form HTML and place wherever you want your form -->
+			<h2 class="title">Commission Request Form</h2>
+			<form class="center" action="https://formspree.io/f/xzboqdbe" method="POST">
+				<div class="center">
+					<input placeholder="Name" type="text" name="Name" required>
+					<input placeholder="Email" type="email" name="Email" required>
+					<input placeholder="Discord" type="text" name="Discord" required>
+				</div>
+				<div class="radioButtons">
+					<h2>Prefered Contact Method</h2>
+					<div class="radio-item">
+						<label for="emailRadio">
+							<input type="radio" id="emailRadio" name="contactItem" value="Email">
+							Email</label>
+					</div>
+					<div class="radio-item">
+						<label for="discordRadio">
+							<input type="radio" id="discordRadio" name="contactItem" value="Discord">
+							Discord</label>
+					</div>
+					<div class="radio-item">
+						<label for="otherRadio">
+							<input type="radio" id="otherRadio" name="contactItem" value="Other">
+							<input placeholder="Other Contact Method" type="text" name="OtherContact">
+						</label>
+					</div>
+				</div>
+
+
+				<div class="radioButtons">
+					<h2>Commsion Request</h2>
+					<div class="radio-item">
+						<label for="emoteRadio">
+							<input type="radio" id="emoteRadio" name="commissionRequest" value="Emote">
+							Emote</label>
+					</div>
+					<div class="radio-item">
+						<label for="otherArtRadio">
+							<input type="radio" id="otherArtRadio" name="commissionRequest" value="Other">
+							<input placeholder="Other" type="text" name="OtherContact">
+						</label>
+					</div>
+
+				</div>
+				<div> 
+					<textarea name="message" placeholder="Commission Details" required></textarea>
+				</br>
+					<label id="tosCheck">
+						<input type="checkbox" required>
+						I agree to (<a target="_blank" href="https://frogcult.net/tos">TOS
+						</a>)
+					</label>
+				</div>
+
+
+				<div class="center"> 
+					<button class="submit button" onclick="showCommissionMenu()" >Cancel</button style="width:700px">
+					<button class="submit button" type="submit">Send</button style="width:700px">
+				</div>
+			</form>
 		</div>
 
 		<div id="portfolio" class="center">
@@ -189,6 +217,9 @@
 
 	</div>
 	<!------------------------------------ SOCIALS ------------------------------------->
+	
+</body>
+<footer>
 	<div class="bottom">
 		<div class="social-icons">
 			<a class="social-icon social-icon--twitch" href="https://www.twitch.tv/tayloristic7" target="_blank">
@@ -249,9 +280,6 @@
 			</a>
 		</div>
 	</div>
-</body>
-<footer>
-
 </footer>
 
 </html>
