@@ -53,59 +53,6 @@ function loadPortfolio() {
 
 }
 
-function showCommissionForm() { 
-    document.getElementById('portfolio').style.display = 'none';
-    document.getElementById('Commissions').style.display = 'none';
-    document.getElementById('pricing').style.display = 'none';
-    document.getElementById('commissionForm').style.display = '';
-}
-
-function showPortfolio() {
-     
-    document.getElementById('portfolio').style.display = '';
-    document.getElementById('commissionForm').style.display = 'none';
-    document.getElementById('pricing').style.display = 'none';
-}
-
-function showPricing() {
-    document.getElementById('pricing').style.display = '';
-    document.getElementById('commissionForm').style.display = 'none';
-    document.getElementById('portfolio').style.display = 'none';
-}
-
-function showCommissionMenu() { 
-    document.getElementById('portfolio').style.display = '';
-    document.getElementById('Commissions').style.display = '';
-    document.getElementById('commissionForm').style.display = 'none';
-
-}
-
-function showMap() {
-    document.getElementById('map').style.display = '';
-    document.getElementById('join').style.display = 'none';
-    document.getElementById('report').style.display = 'none';
-}
-
-function showJoin() {
-    document.getElementById('join').style.display = '';
-    document.getElementById('map').style.display = 'none';
-    document.getElementById('report').style.display = 'none';
-}
-
-
-function showReport() {
-    document.getElementById('join').style.display = 'none';
-    document.getElementById('map').style.display = 'none';
-    document.getElementById('report').style.display = '';
-}
-
-
-function showForm() {
-    document.getElementById('form-div').style.display = '';
-    document.getElementById('reportSuccess').style.display = 'none';
-}
-
-
 function sendMinecraftReport() {
     var name = document.getElementById('reportName').value;
     if (name == "") {
@@ -153,5 +100,92 @@ function sendMinecraftReport() {
         document.getElementById('issueText').style.display = 'none';
         document.getElementById('reportSuccess').style.display = '';
     }
+}
+
+function submitCommissionRequest() {
+    var name = document.getElementById('commissionName').value.trim();
+    var email = document.getElementById('commissionEmail').value.trim();
+    var type = $('input[name="ritem"]:checked').val();
+    var details = document.getElementById('details').value.trim();
+
+    if(name == null || name == '') {
+        document.getElementById('comNameError').style.display = ''
+    }
+
+    if(email == null || email == '') {
+        document.getElementById('comEmailError').style.display = ''
+    }
+
+    if(type == null || type == '') {
+        document.getElementById('typeError').style.display = ''
+    }
+    
+    if(details == null || details == '') {
+        document.getElementById('detailsError').style.display = ''
+    }
+
+    Email.send({
+        "commissions@frogcult.net",
+        "tayloristic7@gmail.com",
+        "Commission Request from " + name ,
+        "Name = " + name + "\n" +
+        "Contact = " + email + "\n" +
+        "Type = " + type + "\n" + 
+        "Details = " + details,
+        "www.frogcult.net", 
+    }).then(
+        message => alert(message)
+      );;
+
+}
+
+function showCommissionForm() { 
+    document.getElementById('portfolio').style.display = 'none';
+    document.getElementById('Commissions').style.display = 'none';
+    document.getElementById('pricing').style.display = 'none';
+    document.getElementById('commissionForm').style.display = '';
+}
+
+function showPortfolio() {
+     
+    document.getElementById('portfolio').style.display = '';
+    document.getElementById('commissionForm').style.display = 'none';
+    document.getElementById('pricing').style.display = 'none';
+}
+
+function showPricing() {
+    document.getElementById('pricing').style.display = '';
+    document.getElementById('commissionForm').style.display = 'none';
+    document.getElementById('portfolio').style.display = 'none';
+}
+
+function showCommissionMenu() { 
+    document.getElementById('portfolio').style.display = '';
+    document.getElementById('Commissions').style.display = '';
+    document.getElementById('commissionForm').style.display = 'none';
+
+}
+
+function showMap() {
+    document.getElementById('map').style.display = '';
+    document.getElementById('join').style.display = 'none';
+    document.getElementById('report').style.display = 'none';
+}
+
+function showJoin() {
+    document.getElementById('join').style.display = '';
+    document.getElementById('map').style.display = 'none';
+    document.getElementById('report').style.display = 'none';
+}
+
+function showReport() {
+    document.getElementById('join').style.display = 'none';
+    document.getElementById('map').style.display = 'none';
+    document.getElementById('report').style.display = '';
+}
+
+function showForm() {
+    document.getElementById('form-div').style.display = '';
+    document.getElementById('reportSuccess').style.display = 'none';
 }
 

@@ -18,6 +18,10 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
+	<!-- For Emails --> 
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	<script src="https://smtpjs.com/v2/smtp.js"></script>
+
 	<!-- My code! -->
 	<script src="scripts.js"></script>
 	<link href="style.css" rel="stylesheet" />
@@ -30,10 +34,6 @@
 		gtag('js', new Date());
 		gtag('config', 'UA-96715828-3');
 	</script>
-
-	<!-- For Emails --> 
-	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-	<script src="https://smtpjs.com/v2/smtp.js"></script>
 </head>
 
 <body>
@@ -51,71 +51,15 @@
 
 
 		<div id="Commissions" class="center">
-			<ul class="menu">
-				<li class="card button" onclick="showPortfolio()">
-					<h3>Portfolio</h3>
-				</li>
-				<li class="card button" onclick="showPricing()">
-					<h3>TOS + Pricing</h3>
-				</li>
-				<li class="card button" onclick="showCommissionForm()">
-					<h3>Commission Me!</h3>
+			<ul class="menu"> 
+				<li class="card button">
+					<a target="_self" href="https://frogcult.net/commissions"><h3>Commission Page</h3></a>
 				</li>
 			</ul>
 		</div>
+ 
 
-		<div id="commissionForm" style="display:none;">
-			<h2 class="title">Commission Request Form</h2>
-			<p class="inputBox">
-				<input name="name" type="text" class="feedback-input" placeholder="Name" id="commissionName" />
-				<p id="comNameError" style="display:none;"> REQUIRED </p>
-			</p>
-			<p class="inputBox">
-				<input name="name" type="text" class="feedback-input" placeholder="Email or Discord Username"
-					id="commissionEmail" />
-				<p id="comEmailError" style="display:none;"> REQUIRED </p>
-			</p>
-
-			<h2> What type of art? </h2>
-			<p id="typeError" style="display:none;"> REQUIRED </p>
-			<div class="radio-item">
-				<input type="radio" id="ritema" name="ritem" value="Emotes">
-				<label for="ritema">Emotes</label>
-			</div>
-			<div class="radio-item">
-				<input type="radio" id="ritemb" name="ritem" value="Other">
-				<label for="ritemb">Other</label>
-			</div>
-			<p id="detailsError" style="display:none;">Details can not be blank!</p>
-			<p class="text">
-				<p id="detailsError" style="display:none;"> REQUIRED </p>
-				<textarea name="text" class="validate[required,length[6,300]] feedback-input" id="details"
-					placeholder="Commission Details"></textarea>
-			</p>
-			<div class="submit button" onclick="showCommissionMenu()" style="width:700px">
-				<h3>Cancel</h3>
-			</div>
-			<div class="submit button" onclick="submitCommissionRequest()" style="width:700px">
-				<h3>Submit Commission Request</h3>
-			</div>
-		</div>
-
-		<div id="portfolio" class="center">
-
-			<p class="title">Portfolio</p>
-			<div id="photos"></div>
-			<div id="portfolioCommissionLink" class="card button center" onclick="showCommissionForm()"
-				style="width:100%">
-				<h3>Commission Me!</h3>
-			</div>
-			<img class="leaf" src="assets/slowLeaves.gif"
-				style="left: 60%; top:55%; transform: rotate(100deg); z-index: -10;" />
-			<img class="leaf" src="assets/slowLeaves.gif"
-				style="left: 15%; top:15%; transform: rotate(290deg); z-index: -10;" />
-
-		</div>
-
-		<div id="pricing" class="center" style="display:none;">
+		<div id="pricing" class="center" >
 			<div id="costs" class="center">
 				<h2 class="title">Pricing</h2>
 				<h3>Emotes: $10 USD</h3>

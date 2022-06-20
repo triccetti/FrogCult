@@ -286,6 +286,7 @@ svg {
 }
 .card a {
   text-decoration: none;
+  color: white;
 }
 .card h3 {
   font-size: 2.5rem;
