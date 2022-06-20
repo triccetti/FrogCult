@@ -53,17 +53,30 @@ function loadPortfolio() {
 
 }
 
-function showCommissionForm() {
-    document.getElementById('commissionForm').style.display = '';
-    document.getElementById('CommisionLink').style.display = 'none';
+function showCommissionForm() { 
+    document.getElementById('portfolio').style.display = 'none';
     document.getElementById('Commissions').style.display = 'none';
+    document.getElementById('pricing').style.display = 'none';
+    document.getElementById('commissionForm').style.display = '';
 }
 
-
-function showCommissionMenu() {
-    document.getElementById('Commissions').style.display = '';
-    document.getElementById('CommisionLink').style.display = '';
+function showPortfolio() {
+     
+    document.getElementById('portfolio').style.display = '';
     document.getElementById('commissionForm').style.display = 'none';
+    document.getElementById('pricing').style.display = 'none';
+}
+
+function showPricing() {
+    document.getElementById('pricing').style.display = '';
+    document.getElementById('commissionForm').style.display = 'none';
+    document.getElementById('portfolio').style.display = 'none';
+}
+
+function showCommissionMenu() { 
+    document.getElementById('Commissions').style.display = '';
+    document.getElementById('commissionForm').style.display = 'none';
+
 }
 
 function showMap() {

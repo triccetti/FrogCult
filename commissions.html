@@ -44,9 +44,7 @@
 
 	<!------------------------------------ COMMISSIONS ------------------------------------->
 	<div id="Commission " class="center">
-		<div id="CommisionLink" class="card button center" onclick="showCommissionForm()" style="width:100%">
-			<h3>Commission Me!</h3>
-		</div>
+
 
 		<div id="Commissions" class="center">
 			<ul class="menu">
@@ -54,10 +52,10 @@
 					<h3>Portfolio</h3>
 				</li>
 				<li class="card button" onclick="showPricing()">
-					<h3>Services + Pricing</h3>
+					<h3>TOS + Pricing</h3>
 				</li>
-				<li class="card button" onclick="showTOS()">
-					<h3>TOS</h3>
+				<li class="card button" onclick="showCommissionForm()">
+					<h3>Commission Me!</h3>
 				</li>
 			</ul>
 		</div>
@@ -66,45 +64,121 @@
 			<h2 class="title">Commission Request Form</h2>
 			<p class="inputBox">
 				<input name="name" type="text" class="feedback-input" placeholder="Name" id="commissionName" />
-			</p> 
+			</p>
 			<p class="inputBox">
-				<input name="name" type="text" class="feedback-input" placeholder="Email (Optional)" id="commissionEmail" />
-			</p> 
- 
+				<input name="name" type="text" class="feedback-input" placeholder="Email (Optional)"
+					id="commissionEmail" />
+			</p>
+
 			<h2> What type of art? </h2>
 			<div class="radio-item">
 				<input type="radio" id="ritema" name="ritem" value="ropt1">
-				<label for="ritema">Option 1</label>
+				<label for="ritema">Emotes</label>
 			</div>
-			
+
 			<div class="radio-item">
 				<input type="radio" id="ritemb" name="ritem" value="ropt2">
-				<label for="ritemb">Option 2</label>
+				<label for="ritemb">Other</label>
 			</div>
 			<p id="detailsError" style="display:none;">Details can not be blank!</p>
 			<p class="text">
-				<textarea name="text" class="validate[required,length[6,300]] feedback-input"
-					id="details" placeholder="Commission Details"></textarea>
+				<textarea name="text" class="validate[required,length[6,300]] feedback-input" id="details"
+					placeholder="Commission Details"></textarea>
 			</p>
 			<div class="submit button" onclick="showCommissionMenu()" style="width:700px">
 				<h3>Cancel</h3>
-			</div>	 
+			</div>
 			<div class="submit button" onclick="submitCommissionRequest()" style="width:700px">
 				<h3>Submit Commission Request</h3>
 			</div>
 		</div>
 
 		<div id="portfolio" class="center">
-			
-			<p class="title" >Portfolio</p>
+
+			<p class="title">Portfolio</p>
 			<div id="photos"></div>
+			<div id="portfolioCommissionLink" class="card button center" onclick="showCommissionForm()"
+				style="width:100%">
+				<h3>Commission Me!</h3>
+			</div>
+			<img class="leaf" src="assets/slowLeaves.gif"
+				style="left: 60%; top:55%; transform: rotate(100deg); z-index: -10;" />
+			<img class="leaf" src="assets/slowLeaves.gif"
+				style="left: 15%; top:15%; transform: rotate(290deg); z-index: -10;" />
+
+		</div>
+
+		<div id="pricing" class="center" style="display:none;">
+			<div id="costs" class="center">
+				<h2 class="title">Pricing</h2>
+				<h3>Emotes: $10 USD</h3>
+				<h3>3 Emotes: $25 USD</h3>
+
+				<h3>Price for other types of art will be determined once given a discription of the piece.</h3>
+
+			</div>
+			<div id="tos" class="center">
+
+				<h2>Terms of Service</h2>
+				<p>All prices and payments are in USD. </p>
+				<p>Payments must be made in FULL before I start the commission.</p>
+				<p>If you have a deadline that needs to be met, please let me know beforehand to confirm if I can meet
+					it.</p>
+				<p>No refunds, but feel free to ask for revisions.</p>
+				<p>Maximum 5 free revisions of <span class="bold">SKETCHES</span> until submitted (not including
+					linework or colored process), complete reworks of the commission will cost the amount of the
+					original work.</p>
+				<p>I will send you WIP (work in progress) sketches for you to approve before I move on to finalizing the
+					emote.</p>
+				<p>Do not redistribute my work on any site without my permission and without crediting me.</p>
+				<p>I reserve the right to decline or request removal of any commission that I see fit or not in
+					compliance with my terms.</p>
+				<p>By commissioning me, you agree to all terms of service.</p>
+
+				<h2>Copyright + Usage Policy Terms of Service</h2>
+				<p>I, the artist, hold every right to the produced drawing, not the commissioner.</p>
+				<p>Therefore, I´m allowed to use the copyrighted artwork to:</p>
+				<ul>
+					<li>Promote myself within any place or website.</li>
+					<li>Publish artbooks/etc with using the piece.</li>
+					<li>To display or post it where I like.</li>
+				</ul>
+
+
+
+				<p>WITHOUT commercial purchase, the CLIENT is allowed to:</p>
+				<ul>
+					<li>Use the copyrighted artwork for personal use</li>
+					<li>Print the art for themself, and claim the right of their character(s) but not the drawing
+						itself.</li>
+					<li>Use the art to promote themselves with proper credit given to the artist.</li>
+				</ul>
+
+				<p>Commissions are for personal use only unless otherwise stated. You cannot use my commissions for
+					merchandise or resale. You may pay to have rights of the design for commercial use and resale.
+					Credit is still required for usage of the artwork.</p>
+
+				<p class="bold">Commercial Fees:</p>
+				<p><span class="bold">BASIC:</span> 2x price for artwork that is used as game assets, promotional uses,
+					song covers etc (eg: emote costs: $10 —> $10 x 2 = $20; $20)</p>
+				<p><span class="bold">FULL:</span> 3x price for artwork that will be sold as merchandise ex: pillows,
+					prints, keychains, etc (eg: for one emote costs: $10 —> $10 x 3 = $30; total $160)</p>
+				<p>Do not redistribute my work on any site without my permission and without crediting me.</p>
+				<p>I reserve the right to decline or request removal of any commission that I see fit or not in
+					compliance with my terms.</p>
+				<p>If you redistribute the commissioned works without paying the release fees/royalty agreement, I
+					reserve the right to decline future commissions.</p>
+				<p>By commissioning me, you agree to all terms of service.</p>
+
+			</div>
+			<img class="leaf" src="assets/slowLeaves.gif"
+				style="left: 60%; top:55%; transform: rotate(100deg); z-index: -10;" />
+			<img class="leaf" src="assets/slowLeaves.gif"
+				style="left: 15%; top:35%; transform: rotate(290deg); z-index: -10;" />
+
 
 		</div>
 	</div>
-
-
-
-
 
 	</div>
 	<!------------------------------------ SOCIALS ------------------------------------->
