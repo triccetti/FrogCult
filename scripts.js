@@ -74,6 +74,7 @@ function showPricing() {
 }
 
 function showCommissionMenu() { 
+    document.getElementById('portfolio').style.display = '';
     document.getElementById('Commissions').style.display = '';
     document.getElementById('commissionForm').style.display = 'none';
 

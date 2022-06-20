@@ -343,6 +343,12 @@ input[type=text] {
     }
 }
 
+#report {
+    h3 {
+        color: white;
+    }
+}
+
 textarea {
     border-radius: 30px;
     border: 8px solid $color-coral;
@@ -465,4 +471,29 @@ input[type="radio"]:checked {
 
 .bold {
     font-weight: bold;
+}
+
+.bullet {
+    font-size: 2rem;
+    color: $color-green;
+    a {
+        text-decoration: none;
+        color:  $color-coral;
+    }
+}
+
+#join {
+    max-height: 600px;
+    max-width: 50%;
+    overflow: scroll;
+    overflow-x: hidden; // hide horizontal
+    margin: 10px auto;
+    padding: 15px;
+
+    img {
+        width: 600px;
+    }
+    .num {
+        font-size: 3rem;
+    }
 }

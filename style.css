@@ -347,6 +347,10 @@ input[type=text]:focus {
   box-shadow: 0 0 3rem -1rem #2c923d;
 }
 
+#report h3 {
+  color: white;
+}
+
 textarea {
   border-radius: 30px;
   border: 8px solid #DE5A4B;
@@ -461,6 +465,30 @@ input[type=radio]:checked {
 
 .bold {
   font-weight: bold;
+}
+
+.bullet {
+  font-size: 2rem;
+  color: #2c923d;
+}
+.bullet a {
+  text-decoration: none;
+  color: #DE5A4B;
+}
+
+#join {
+  max-height: 600px;
+  max-width: 50%;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin: 10px auto;
+  padding: 15px;
+}
+#join img {
+  width: 600px;
+}
+#join .num {
+  font-size: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
