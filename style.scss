@@ -483,13 +483,17 @@ input[type="radio"]:checked {
 }
 
 #join {
-    max-height: 600px;
-    max-width: 50%;
+    max-height: 550px;
+    max-width: 55%;
     overflow: scroll;
     overflow-x: hidden; // hide horizontal
     margin: 10px auto;
     padding: 15px;
 
+    h1 {
+       
+        font-size: 3rem; 
+    }
     img {
         width: 600px;
     }
