@@ -291,6 +291,25 @@ input[type=email] {
     }
 }
 
+.link {
+    color: $color-green;
+    cursor: pointer;
+}
+
+#rules {
+
+    li {
+        font-size: 1.5rem;
+        text-decoration: none;
+        list-style-type: none;
+
+        span {
+            font-size: 1.75rem;
+            ;
+        }
+    }
+}
+
 textarea {
     border-radius: 30px;
     border: 8px solid $color-coral;
@@ -429,6 +448,48 @@ button {
     vertical-align: top;
     text-align: left;
     padding: 10px;
+}
+
+input[type="checkbox"] {
+    width: 40px;
+    height: 40px;
+    background-color: $color-light-green;
+    border-color: $color-green;
+    margin-top: 5px;
+}
+
+#tosCheck {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+#turorials {
+    max-width: 25%;
+
+    ul {
+        list-style-type: none;
+    }
+
+
+}
+
+.question {
+
+    color: white;
+    border: 8px solid $color-coral;
+    background-color: $color-light-coral;
+    border-radius: 50px;
+    display: inline-block;
+    width: 90%;
+    max-width: 10rem;
+    margin: 0.5rem;
+    text-decoration: none;
+    overflow: hidden;
+    box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+    padding: none;
+    position: relative; 
+    font-size: 1.5rem;
 }
 
 /* Social Buttons */
@@ -790,19 +851,4 @@ button {
     #tos {
         width: 90%;
     }
-}
-
-
-
-input[type="checkbox"] {
-    width: 40px;
-    height: 40px;
-    background-color: $color-light-green;
-    border-color: $color-green;
-    margin-top: 5px; 
-}
-
-#tosCheck {
-    text-align: center;
-    font-size: 2.5rem;
 }

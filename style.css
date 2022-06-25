@@ -241,6 +241,20 @@ input[type=email]:focus {
   color: white;
 }
 
+.link {
+  color: #2c923d;
+  cursor: pointer;
+}
+
+#rules li {
+  font-size: 1.5rem;
+  text-decoration: none;
+  list-style-type: none;
+}
+#rules li span {
+  font-size: 1.75rem;
+}
+
 textarea {
   border-radius: 30px;
   border: 8px solid #DE5A4B;
@@ -369,6 +383,44 @@ button {
   vertical-align: top;
   text-align: left;
   padding: 10px;
+}
+
+input[type=checkbox] {
+  width: 40px;
+  height: 40px;
+  background-color: #AFF8A0;
+  border-color: #2c923d;
+  margin-top: 5px;
+}
+
+#tosCheck {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+#turorials {
+  max-width: 25%;
+}
+#turorials ul {
+  list-style-type: none;
+}
+
+.question {
+  color: white;
+  border: 8px solid #DE5A4B;
+  background-color: #F5A8A4;
+  border-radius: 50px;
+  display: inline-block;
+  width: 90%;
+  max-width: 10rem;
+  margin: 0.5rem;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+  padding: none;
+  position: relative;
+  font-size: 1.5rem;
 }
 
 /* Social Buttons */
@@ -779,18 +831,6 @@ input[type=email]:focus {
   #tos {
     width: 90%;
   }
-}
-input[type=checkbox] {
-  width: 40px;
-  height: 40px;
-  background-color: #AFF8A0;
-  border-color: #2c923d;
-  margin-top: 5px;
-}
-
-#tosCheck {
-  text-align: center;
-  font-size: 2.5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

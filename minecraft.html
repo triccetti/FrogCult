@@ -25,7 +25,7 @@
 	<!-- My code! -->
 	<script src="scripts.js"></script>
 	<link href="style.css" rel="stylesheet" />
-	
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4TB4FYE05"></script>
 	<script>
@@ -54,6 +54,9 @@
 		<ul class="menu">
 			<li class="card button" onclick="showJoin()">
 				<h3>Join the Server</h3>
+			</li>
+			<li class="card button" onclick="showRules()">
+				<h3>Rules</h3>
 			</li>
 			<li class="card button" onclick="showMap()">
 				<h3>Server Map</h3>
@@ -163,8 +166,48 @@
 
 		</div>
 
-		<div id="howTo">
+		<div id="rules" style="display:none;">
+			<h2>FrogCult SMP Rules!</h2>
+			<h3>Breaking any of the following rules may result in a server or community ban, so please follow them.</h3>
+			<ul>
+				<li><span>[1]</span> Usernames and skins must be appropriate.</li>
+				<li><span>[2]</span> Griefing is strictly prohibited and will result in a permanent ban.</li>
+				<li><span>[3]</span> Do not hack or cheat it will result in a permanent ban, THIS INCLUDES XRAY
+					datapacks.</li>
+				<li><span>[4]</span> If you are having issues with another player or are uncomfortable with their
+					messages, please
+					notify a mod or report it <span class="link" onclick="showReport()">here</span>.</li>
+				<li><span>[5]</span> Any type of harassment is not allowed.</li>
+				<li><span>[6]</span> Never share your account information with anyone.</li>
+				<li><span>[7]</span> This is a shared community, so please keep the chat friendly for all ages.</li>
+				<li><span>[8]</span>Profanity towards another, excessive swearing, racism, and discrimination are
+					prohibited.</li>
+				<li><span>[9]</span> Stealing another players items is not allowed and is considered griefing.</li>
+				<li><span>[10]</span> Ask before you build next to someone.</li>
+				<li><span>[11]</span> Be polite and show respect to each other.</li>
+				<li><span>[12]</span> Have fun!</li>
+			</ul>
+		</div>
 
+		<div id="howTo" style="display:none;">
+			<div id="tutorials">
+				<h2>How To...</h3>
+				<ul class="tutorialMenu">
+					<li class="question">
+						<h3>Set A Home</h3>
+					</li>
+					<li class="question">
+						<h3>Claim Land</h3>
+					</li>
+					<li class="question">
+						<h3>Warp</h3>
+					</li>
+					<li class="question">
+						<h3>See the Map</h3>
+					</li> 
+				</ul>
+			</div>
+			<div id="instructions"></div>
 		</div>
 	</div>
 

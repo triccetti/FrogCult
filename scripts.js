@@ -129,26 +129,49 @@ function showCommissionMenu() {
     document.getElementById('commissionForm').style.display = 'none'; 
 }
 
-function showMap() {
-    document.getElementById('map').style.display = '';
-    document.getElementById('join').style.display = 'none';
-    document.getElementById('report').style.display = 'none';
-}
-
-function showJoin() {
-    document.getElementById('join').style.display = '';
-    document.getElementById('map').style.display = 'none';
-    document.getElementById('report').style.display = 'none';
-}
-
-function showReport() {
-    document.getElementById('join').style.display = 'none';
-    document.getElementById('map').style.display = 'none';
-    document.getElementById('report').style.display = '';
-}
 
 function showForm() {
     document.getElementById('form-div').style.display = '';
     document.getElementById('reportSuccess').style.display = 'none';
 }
 
+/* MINECRAFT TAB */
+function showMap() {
+    document.getElementById('map').style.display = '';
+    document.getElementById('join').style.display = 'none';
+    document.getElementById('rules').style.display = 'none';
+    document.getElementById('report').style.display = 'none';
+    document.getElementById('howTo').style.display = 'none';
+}
+
+function showJoin() {
+    document.getElementById('join').style.display = '';
+    document.getElementById('map').style.display = 'none';
+    document.getElementById('report').style.display = 'none';
+    document.getElementById('rules').style.display = 'none';
+    document.getElementById('howTo').style.display = 'none';
+}
+function showTutorials() {
+    document.getElementById('join').style.display = 'none';
+    document.getElementById('map').style.display = 'none';
+    document.getElementById('report').style.display = 'none';
+    document.getElementById('rules').style.display = 'none';
+    document.getElementById('howTo').style.display = '';
+}
+
+
+function showReport() {
+    document.getElementById('join').style.display = 'none';
+    document.getElementById('map').style.display = 'none';
+    document.getElementById('howTo').style.display = 'none';
+    document.getElementById('rules').style.display = 'none';
+    document.getElementById('report').style.display = '';
+}
+
+function showRules() {
+    document.getElementById('join').style.display = 'none';
+    document.getElementById('map').style.display = 'none';
+    document.getElementById('howTo').style.display = 'none';
+    document.getElementById('report').style.display = 'none';
+    document.getElementById('rules').style.display = '';
+}
