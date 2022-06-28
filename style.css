@@ -213,9 +213,10 @@ a:hover {
   min-height: 500px;
 }
 
-#issueText {
+#issueText, #issueCheckboxText {
   color: #DE5A4B;
   padding: 0;
+  font-size: 2rem;
 }
 
 .form {
@@ -369,8 +370,13 @@ input[type=radio]:checked {
   font-size: 1.5rem;
 }
 
-#tosCheck {
-  font-weight: 2rem;
+#tosCheck, #reportCheck {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+#reportCheck {
+  display: block;
 }
 
 button {
@@ -393,16 +399,17 @@ input[type=checkbox] {
   margin-top: 5px;
 }
 
-#tosCheck {
-  text-align: center;
-  font-size: 2.5rem;
-}
-
 #turorials {
   max-width: 25%;
+  display: inline-block;
 }
 #turorials ul {
   list-style-type: none;
+}
+
+#instructions {
+  max-width: 75%;
+  display: inline-block;
 }
 
 .question {

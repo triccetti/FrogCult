@@ -11,7 +11,7 @@ window.addEventListener('load', function () {
 
 });
 
-const discordReportHook = "https://discord.com/api/webhooks/988160587173363762/PwmMGa7Casg8BjDVSKUZCfAF8_IEVJQaWmdDU3Scr7oZzZtHpKGcvYHE6efJJJHv5sGd";
+const discordReportHook = "https://discord.com/api/webhooks/991423438239567972/GWpHiePEoYSotQmayawZUGX41UF9yt1GeGyISBp5x1aztdH5JI76HWZQASNqIV4VivMX";
 
 function lazyLoad() {
     var card_images = document.querySelectorAll('.card-image');
@@ -39,7 +39,7 @@ function lazyLoad() {
 
 function loadPortfolio() {
     var dir = "assets/portfolio/";
-    var files = ["purrl.png", "peanut.png", "kirby.png", "TenaciousD.PNG", "kirb.png"];
+    var files = ["purrl.png", "peanut.png", "kirby.png", "killjoy.png", "TenaciousD.PNG", "kirb.png"];
     var photoHtml = document.getElementById('photos');
     if(photoHtml == null) return;
     var i = 0;
@@ -61,10 +61,13 @@ function sendMinecraftReport() {
     }
 
     var issue = document.getElementById('reportIssue').value;
-
+    var checked = document.getElementById('reportCheckbox').checked;
+    if (checked == null || !checked) {
+        document.getElementById('issueCheckboxText').style.display = '';
+    }
     if (issue == null || issue == "") {
         document.getElementById('issueText').style.display = '';
-    } else {
+    } else if(checked) {
 
         var report = "Report made by: **" + name + "**\n" +
             ">>> " + issue;

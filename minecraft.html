@@ -64,7 +64,7 @@
 			<li class="card button" onclick="showReport()">
 				<h3>Report</h3>
 			</li>
-			<li class="card button">
+			<li class="card button" onclick="showTutorials()">
 				<h3>How To's (Soon)</h3>
 			</li>
 		</ul>
@@ -146,9 +146,11 @@
 							<textarea name="text" class="validate[required,length[6,300]] feedback-input"
 								id="reportIssue" placeholder="Issue to report"></textarea>
 						</p>
-
-
-
+						<label id="reportCheck">	
+							<p id="issueCheckboxText" style="display:none;">Please confirm you are human!</p>
+							<input id="reportCheckbox" type="checkbox" required>
+								I am human! 
+						</label> 
 						<div class="submit card button" onclick="sendMinecraftReport()">
 							<h3>Send Report</h3>
 						</div>
@@ -192,22 +194,24 @@
 		<div id="howTo" style="display:none;">
 			<div id="tutorials">
 				<h2>How To...</h3>
-				<ul class="tutorialMenu">
-					<li class="question">
-						<h3>Set A Home</h3>
-					</li>
-					<li class="question">
-						<h3>Claim Land</h3>
-					</li>
-					<li class="question">
-						<h3>Warp</h3>
-					</li>
-					<li class="question">
-						<h3>See the Map</h3>
-					</li> 
-				</ul>
+					<ul class="tutorialMenu">
+						<li class="question">
+							<h3>Set A Home</h3>
+						</li>
+						<li class="question">
+							<h3>Claim Land</h3>
+						</li>
+						<li class="question">
+							<h3>Warp</h3>
+						</li>
+						<li class="question">
+							<h3>See the Map</h3>
+						</li>
+					</ul>
 			</div>
-			<div id="instructions"></div>
+			<div id="instructions">
+				<div id="setHome">You have two homes! To set your first home just type /home</div>
+			</div>
 		</div>
 	</div>
 
