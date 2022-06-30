@@ -42,7 +42,7 @@ function lazyLoad() {
 
 function loadPortfolio() {
     var dir = "assets/portfolio/";
-    var files = ["purrl.png", "peanut.png", "kirby.png", "killjoy.png", "TenaciousD.PNG", "kirb.png"];
+    var files = ["purrl.png", "peanut.png", "kirby.png", "killjoy.PNG", "TenaciousD.PNG", "kirb.png"];
     var photoHtml = document.getElementById('photos');
     if(photoHtml == null) return;
     var i = 0;
