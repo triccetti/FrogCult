@@ -22,6 +22,10 @@
 	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 	<script src="https://smtpjs.com/v2/smtp.js"></script>
 
+	<!-- Captcha-->
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+
+
 	<!-- My code! -->
 	<script src="scripts.js"></script>
 	<link href="style.css" rel="stylesheet" />
@@ -133,27 +137,23 @@
 
 			<div id="form-main">
 				<div id="form-div">
-					<form class="form" id="report">
 
+					<!-- modify this form HTML and place wherever you want your form -->
+					<form  id="report" action="https://formspree.io/f/moqrzbop" method="POST">
 						<h3 class="title">Report server issues here:</h3>
 						<p class="inputBox">
 							<input name="name" type="text" class="feedback-input" placeholder="Name (Optional)"
 								id="reportName" />
 						</p>
 
-						<p id="issueText" style="display:none;">Issue can not be blank!</p>
+
 						<p class="text">
-							<textarea name="text" class="validate[required,length[6,300]] feedback-input"
-								id="reportIssue" placeholder="Issue to report"></textarea>
+							<textarea name="issue" class="validate[required,length[6,300]] feedback-input"
+								id="reportIssue" placeholder="Issue to report" required></textarea>
 						</p>
-						<label id="reportCheck">	
-							<p id="issueCheckboxText" style="display:none;">Please confirm you are human!</p>
-							<input id="reportCheckbox" type="checkbox" required>
-								I am human! 
-						</label> 
-						<div class="submit card button" onclick="sendMinecraftReport()">
-							<h3>Send Report</h3>
-						</div>
+
+						<!-- your other form fields go here -->
+						<button class="submit button" type="submit">Send Report</button>
 					</form>
 				</div>
 			</div>

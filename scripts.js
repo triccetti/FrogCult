@@ -11,7 +11,10 @@ window.addEventListener('load', function () {
 
 });
 
-const discordReportHook = "https://discord.com/api/webhooks/991423438239567972/GWpHiePEoYSotQmayawZUGX41UF9yt1GeGyISBp5x1aztdH5JI76HWZQASNqIV4VivMX";
+function onSubmit(token) {
+    document.getElementById("demo-form").submit();
+    sendMinecraftReport();
+}
 
 function lazyLoad() {
     var card_images = document.querySelectorAll('.card-image');
@@ -55,55 +58,7 @@ function loadPortfolio() {
 }
 
 function sendMinecraftReport() {
-    var name = document.getElementById('reportName').value;
-    if (name == "") {
-        name = "Anonymous"
-    }
-
-    var issue = document.getElementById('reportIssue').value;
-    var checked = document.getElementById('reportCheckbox').checked;
-    if (checked == null || !checked) {
-        document.getElementById('issueCheckboxText').style.display = '';
-    }
-    if (issue == null || issue == "") {
-        document.getElementById('issueText').style.display = '';
-    } else if(checked) {
-
-        var report = "Report made by: **" + name + "**\n" +
-            ">>> " + issue;
-
-
-
-        const request = new XMLHttpRequest();
-        request.open("POST", discordReportHook, true);
-        request.setRequestHeader('Content-type', 'application/json');
-
-
-        request.onreadystatechange = function () { // Call a function when the state changes.
-            if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-                // successful
-                console.log("success!");
-                document.getElementById('reportSuccess').style.display = '';
-                document.getElementById('issueText').style.display = 'none';
-            }
-        }
-        const params = {
-            username: "Frog Cult Complaint Bot",
-            avatar_url: "",
-            content: report
-        }
-
-        request.send(JSON.stringify(params));
-        // after send clear values
-        document.getElementById('reportIssue').value = "";
-        document.getElementById('reportName').value = "";
-
-
-        console.log("success!");
-        document.getElementById('form-div').style.display = 'none';
-        document.getElementById('issueText').style.display = 'none';
-        document.getElementById('reportSuccess').style.display = '';
-    }
+ 
 }
 
 function showCommissionForm() {
