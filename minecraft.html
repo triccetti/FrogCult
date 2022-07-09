@@ -69,50 +69,124 @@
 				<h3>Report</h3>
 			</li>
 			<li class="card button" onclick="showTutorials()">
-				<h3>How To's (Soon)</h3>
+				<h3>How To's</h3>
 			</li>
 		</ul>
 
-		<div id="join">
-			<h1>Server IP: mc.frogcult.net</h1>
-			<h2><span class="bold">THE SERVER IS JAVA ONLY</span></span></h2>
+		<div class="instructions">
+			<div id="join">
+				<div id="javaButton" class="card button" target="_blank" onclick="showJava()">
+					<h3>Join with Java</h3>
+				</div>
 
-			<h2>Follow these steps to join:</h2>
-			<p class="bullet"><span class="num">1.</span> Click <a href="https://discord.gg/r8Mdy6y">here</a> to join
-				the Community Discord.</p>
-			<p class="bullet">YOU MUST BE IN THE DISCORD TO PLAY ON THE SERVER</p>
-			<p class="bullet"><span class="num">2.</span> Once you join react to the server rules (See below)</p>
-			<img src="assets/ruleReact.gif" />
-			<p class="bullet">You should now be able to see all the channels in the server.</p>
-			<p class="bullet"><span class="num">3.</span> Now head over to Minecraft Java Edition and add the server
-				(See below)</p>
-			<p class="bullet"><span class="bold">Server IP:</span> mc.frogcult.net</p>
-			<img src="assets/addServer.gif" />
-			<p class="bullet"><span class="num">4.</span> Click the server like you normally would to enter the world.
-			</p>
-			<p class="bullet">There will be an error since your account is not linked but should be given a code. (See
-				below)</p>
-			<img src="assets/code.png" />
-			<p class="bullet"><span class="num">5.</span> Copy the code and head back over to Discord.</p>
-			<p class="bullet"><span class="num">6.</span> Look on the right of the Discord server and see the user <span
-					class="bold">Minecraft Bot Guy</span> (See below).</p>
-			<p class="bullet">Right click <span class="bold">Minecraft Bot Guy</span> and click <span
-					class="bold">Message</span> </p>
-			<img src="assets/messageLink.gif" />
-			<p class="bullet"><span class="num">7.</span> Send the code you recieved in step 4. <span
-					class="bold">Minecraft Bot Guy</span> should reply that your account is linked.</p>
-			<p class="bullet">Now you are done and should be able to go back and enter the server!</p>
+				<div id="bedrockButton" class="card button" target="_blank" onclick="showBedrock()">
+					<h3>Join with Bedrock</h3>
+				</div>
 
-			<div class="card button" target="_blank" onclick="showMap()">
-				<h3>Map</h3>
-			</div>
+				<div id="java">
+					<h1>Server IP: mc.frogcult.net</h1>
+					<h2 class="large-text">Java Instructions:</h2>
+					<p class="bullet"><span class="num">1.</span> Click <a target="_blank"
+							href="https://discord.gg/r8Mdy6y">here</a> to join the Community Discord.</p>
+					<p class="bullet">YOU MUST BE IN THE DISCORD TO PLAY ON THE SERVER</p>
+					<p class="bullet"><span class="num">2.</span> Once you join react to the server rules (See below)
+					</p>
+					<img src="assets/ruleReact.gif" />
+					<p class="bullet">You should now be able to see all the channels in the server.</p>
+					<p class="bullet"><span class="num">3.</span> Now head over to Minecraft Java Edition and add the
+						server
+						(See below)</p>
 
-			<p class="bullet">If you have an issue with someone/something in the server submit a report here:</p>
-			<div class="card button" target="_blank" onclick="showReport()">
-				<h3>Report System</h3>
+					<p class="bullet"><span class="bold">Server IP:</span> mc.frogcult.net</p>
+					<img src="assets/addServer.gif" />
+					<p class="bullet"><span class="num">4.</span> Click the server like you normally would to enter the
+						world.
+					</p>
+					<p class="bullet">There will be an error since your account is not linked but should be given a
+						code.
+						(See
+						below)</p>
+					<img src="assets/code.png" />
+					<p class="bullet"><span class="num">5.</span> Copy the code and head back over to Discord.</p>
+					<p class="bullet"><span class="num">6.</span> Look on the right of the Discord server and see the
+						user
+						<span class="bold">Minecraft Bot Guy</span> (See below).
+					</p>
+					<p class="bullet">Right click <span class="bold">Minecraft Bot Guy</span> and click <span
+							class="bold">Message</span> (Make sure you have DM's allowed in Discord)</p>
+					<img src="assets/messageLink.gif" />
+					<p class="bullet"><span class="num">7.</span> Send the code you recieved in step 4. <span
+							class="bold">Minecraft Bot Guy</span> should reply that your account is linked.</p>
+					<p class="bullet">Now you are done and should be able to go back and enter the server!</p>
+
+					<div class="card button" target="_blank" onclick="showMap()">
+						<h3>Map</h3>
+					</div>
+
+					<p class="bullet">If you have an issue with someone/something in the server submit a report here:
+					</p>
+					<div class="card button" target="_blank" onclick="showReport()">
+						<h3>Report System</h3>
+					</div>
+				</div>
+
+				<div id="bedrock" style="display: none;">
+					<h1>Server IP: 51.81.198.176 Port: 8039</h1>
+					<h2 class="large-text">Bedrock Instructions:</h2>
+					<p class="bullet">Note the server is hosted as a Java server Bedrock may be unstable. </p>
+					<p class="bullet"><span class="num">1.</span> Click <a target="_blank"
+							href="https://discord.gg/r8Mdy6y">here</a> to join the Community Discord.</p>
+					<p class="bullet">YOU MUST BE IN THE DISCORD TO PLAY ON THE SERVER</p>
+					<p class="bullet"><span class="num">2.</span> Once you join react to the server rules (See below)
+					</p>
+					<img src="assets/ruleReact.gif" />
+					<p class="bullet">You should now be able to see all the channels in the server.</p>
+					<p class="bullet"><span class="num">3.</span> Now head over to Minecraft Bedrock Edition and add the
+						server
+						(See below)</p>
+					<p class="bullet">* If you are adding a server on Xbox or Nintendo Switch check out this
+						article for how to add the server</p>
+					<div>
+						<a class="card button" target="_blank"
+							href="https://apexminecrafthosting.com/how-to-join-a-bedrock-edition-server-on-xbox-switch/">
+							<h3>Add Server on Console</h3>
+						</a>
+					</div>
+					<p class="bullet"><span class="bold">Server Address:</span> 51.81.198.176</p>
+					<p class="bullet"><span class="bold">Port:</span> 8039</p>
+					<img src="assets/bedrockServerAdd.PNG" />
+					<p class="bullet"><span class="num">4.</span> Click the server like you normally would to enter the
+						world.
+					</p>
+					<p class="bullet">There will be an error since your account is not linked but should be given a
+						code.
+						(See
+						below)</p>
+					<img src="assets/bedrockCode.PNG" />
+					<p class="bullet"><span class="num">5.</span> Copy the code and head back over to Discord.</p>
+					<p class="bullet"><span class="num">6.</span> Look on the right of the Discord server and see the
+						user
+						<span class="bold">Minecraft Bot Guy</span> (See below).
+					</p>
+					<p class="bullet">Right click <span class="bold">Minecraft Bot Guy</span> and click <span
+							class="bold">Message</span> (Make sure you have DM's allowed in Discord)</p>
+					<img src="assets/messageLink.gif" />
+					<p class="bullet"><span class="num">7.</span> Send the code you recieved in step 4. <span
+							class="bold">Minecraft Bot Guy</span> should reply that your account is linked.</p>
+					<p class="bullet">Now you are done and should be able to go back and enter the server!</p>
+
+					<div class="card button" target="_blank" onclick="showMap()">
+						<h3>Map</h3>
+					</div>
+
+					<p class="bullet">If you have an issue with someone/something in the server submit a report here:
+					</p>
+					<div class="card button" target="_blank" onclick="showReport()">
+						<h3>Report System</h3>
+					</div>
+				</div>
 			</div>
 		</div>
-
 		<div id="map" class="anim" style="display:none">
 
 			<iframe class="mapEmbed" src="https://map.frogcult.net/">
@@ -139,7 +213,7 @@
 				<div id="form-div">
 
 					<!-- modify this form HTML and place wherever you want your form -->
-					<form  id="report" action="https://formspree.io/f/moqrzbop" method="POST">
+					<form id="report" action="https://formspree.io/f/moqrzbop" method="POST">
 						<h3 class="title">Report server issues here:</h3>
 						<p class="inputBox">
 							<input name="name" type="text" class="feedback-input" placeholder="Name (Optional)"
@@ -195,22 +269,106 @@
 			<div id="tutorials">
 				<h2>How To...</h3>
 					<ul class="tutorialMenu">
-						<li class="question">
+						<li class="question button" onclick="showSetHome()">
 							<h3>Set A Home</h3>
 						</li>
-						<li class="question">
+						<li class="question button" onclick="showClaimLand()">
 							<h3>Claim Land</h3>
 						</li>
-						<li class="question">
+						<li class="question button" onclick="showWarp()">
 							<h3>Warp</h3>
 						</li>
-						<li class="question">
-							<h3>See the Map</h3>
+						<li class="question button" onclick="showMapInfo()">
+							<h3>1.19 Map</h3>
 						</li>
 					</ul>
 			</div>
-			<div id="instructions">
-				<div id="setHome">You have two homes! To set your first home just type /home</div>
+			<div class="instructions">
+				<div class="instruction" id="setHome">
+					<h2 class="large-text">On the FrogCult SMP you can have up to 2 homes.</h2>
+					<p>Set your first home by doing: </p>
+					<code>/sethome [HomeName1]</code>
+					<p>Or simply just saying </p>
+					<code>/sethome</code>
+					<p>Set your second home by doing: </p>
+					<code>/sethome [HomeName2]</code>
+					<br />
+					<br />
+					<p>Teleport to your first home with (This only works if you have one home set): </p>
+					<code>/home</code>
+					<p>Otherwise to get to the respective homes do: </p>
+					<code>/home 1</code>
+					<br />
+					<code>/home 2</code>
+					<p>Or</p>
+					<code>/home [HomeName]</code>
+				</div>
+				<div class="instruction" id="claimLand" style="display: none;">
+					<h2 class="large-text">On the FrogCult SMP you can have multiple claims.</h2>
+					<p>To claim land you first need to craft a golden shovel or optain them from the spawn tent: </p>
+					<code>/warp spawn </code>
+					<p>To get to the spawn island then walk into the tent below.</p>
+					<br />
+					<p>Once you have a golden shovel simply hold it and right click one corner of the land you want to
+						claim</p>
+					<p>A diamond block will appear marking the first corner of the claim.</p>
+					<p>Move to the otherside of the land you want to claim and right click again with the shovel in
+						hand.</p>
+					<p>A rectangle (like below) should appear and this is the outline of your claim!</p>
+					<img src="assets/claimExample.PNG" />
+					<br />
+					<br />
+					<p>To trust other players: </p>
+					<code>/trust [player_name]</code>
+					<br />
+					<p>To view all trusted players do: </p>
+					<code>/trustlist</code>
+					<br />
+					<p>To abandon claim, stand in the claim you wish to abandon and do: </p>
+					<code>/abandonclaim</code>
+					<br />
+					<p>To abandon all claims do: </p>
+					<code>/abandonallclaims</code>
+					<br />
+					<p>For more information check out the Claim plugins wiki here:</p>
+					<a target="_blank"
+						href="https://github.com/bloodmc/GriefDefender/wiki">https://github.com/bloodmc/GriefDefender/wiki
+					</a>
+				</div>
+				<div class="instruction" id="warp" style="display: none;">
+					<h2 class="large-text">On the FrogCult SMP there are multiple warps you can use.</h2>
+					<p>To get to the server spawn do: </p>
+					<code>/warp spawn </code>
+					<br />
+					<p>To get to the server town/shop district do: </p>
+					<code>/warp town </code>
+					<br />
+					<p>To get below the server spawn, aka the ground do: </p>
+					<code>/warp ground </code>
+					<br />
+					<br />
+					<p>There are also some other places you can go to from the town like the end portal or even a gold
+						farm.</p>
+					<p>Go to the town and you will see a portal room: </p>
+					<code>/warp town </code>
+					<p>To teleport to these places try jumping through the paintings and explore: </p>
+					<img src="assets/portals.PNG" />
+					<p>And remember you can always get back home or to town with: </p>
+					<code>/warp town </code>
+					<br />
+					<code>/home </code>
+				</div>
+				<div class="instruction" id="mapInfo" style="display: none;">
+					<h2 class="large-text">On the FrogCult SMP we have a map.</h2>
+					<p>To see the map click here: <span class="link" onclick="showMap()">Map</span> </p>
+					<br />
+
+					<p>To see the maps to the other worlds (i.e. 1.19, the nether and the end) go to the very right of
+						the map. </p><img src="assets/arrow.PNG" />
+
+					<p>There should be a tiny arrow that if you click opens a list of players and worlds: </p>
+					<img src="assets/otherWorlds.PNG" />
+				</div>
 			</div>
 		</div>
 	</div>

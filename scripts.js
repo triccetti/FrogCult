@@ -44,7 +44,7 @@ function loadPortfolio() {
     var dir = "assets/portfolio/";
     var files = ["purrl.png", "peanut.png", "kirby.png", "killjoy.PNG", "TenaciousD.PNG", "kirb.png"];
     var photoHtml = document.getElementById('photos');
-    if(photoHtml == null) return;
+    if (photoHtml == null) return;
     var i = 0;
     files.forEach(photo => {
 
@@ -58,7 +58,7 @@ function loadPortfolio() {
 }
 
 function sendMinecraftReport() {
- 
+
 }
 
 function showCommissionForm() {
@@ -84,7 +84,7 @@ function showPricing() {
 function showCommissionMenu() {
     document.getElementById('portfolio').style.display = '';
     document.getElementById('Commissions').style.display = '';
-    document.getElementById('commissionForm').style.display = 'none'; 
+    document.getElementById('commissionForm').style.display = 'none';
 }
 
 
@@ -132,4 +132,51 @@ function showRules() {
     document.getElementById('howTo').style.display = 'none';
     document.getElementById('report').style.display = 'none';
     document.getElementById('rules').style.display = '';
+}
+
+
+function showJava() {
+    document.getElementById('java').style.display = '';
+    document.getElementById('bedrock').style.display = 'none';
+    document.getElementById('javaButton').style.display = 'none';
+    document.getElementById('bedrockButton').style.display = '';
+    document.getElementById('bedrockButton').classList.remove('selected');
+
+}
+function showBedrock() {
+    document.getElementById('java').style.display = 'none';
+    document.getElementById('bedrock').style.display = '';
+    document.getElementById('bedrockButton').style.display = 'none';
+    document.getElementById('javaButton').style.display = '';
+    document.getElementById('javaButton').classList.remove('selected');
+}
+
+
+/*MINECRAFT TUTORIALS */
+function showSetHome() {
+    document.getElementById('setHome').style.display = '';
+    document.getElementById('warp').style.display = 'none';
+    document.getElementById('claimLand').style.display = 'none';
+    document.getElementById('mapInfo').style.display = 'none';
+}
+
+function showClaimLand() {
+    document.getElementById('setHome').style.display = 'none';
+    document.getElementById('warp').style.display = 'none';
+    document.getElementById('claimLand').style.display = '';
+    document.getElementById('mapInfo').style.display = 'none';
+}
+
+function showWarp() {
+    document.getElementById('setHome').style.display = 'none';
+    document.getElementById('warp').style.display = '';
+    document.getElementById('claimLand').style.display = 'none';
+    document.getElementById('mapInfo').style.display = 'none';
+}
+
+function showMapInfo() {
+    document.getElementById('setHome').style.display = 'none';
+    document.getElementById('warp').style.display = 'none';
+    document.getElementById('claimLand').style.display = 'none';
+    document.getElementById('mapInfo').style.display = '';
 }

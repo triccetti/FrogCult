@@ -80,7 +80,16 @@ h2 {
   display: block;
 }
 
+.instruction {
+  text-align: left;
+  font-size: 2rem;
+}
+
 /* Social Icon Mixin */
+code {
+  color: #DE5A4B;
+}
+
 /* Tooltips */
 .tooltip {
   display: block;
@@ -407,9 +416,12 @@ input[type=checkbox] {
   list-style-type: none;
 }
 
-#instructions {
+.instructions {
   max-width: 75%;
   display: inline-block;
+}
+.instructions img {
+  max-width: 95%;
 }
 
 .question {
@@ -674,7 +686,10 @@ input[type=checkbox] {
 /* Minecraft Join Instructions */
 /* Large Screen */
 @media (min-width: 1200px) {
-  #join {
+  .large-text {
+    font-size: 3rem;
+  }
+  #java, #bedrock {
     max-height: 550px;
     max-width: 75%;
     overflow: scroll;
@@ -682,13 +697,13 @@ input[type=checkbox] {
     margin: 10px auto;
     padding: 15px;
   }
-  #join h1 {
-    font-size: 3rem;
+  #java h1, #bedrock h1 {
+    font-size: 2.5rem;
   }
-  #join img {
+  #java img, #bedrock img {
     width: 600px;
   }
-  #join .num {
+  #java .num, #bedrock .num {
     font-size: 3rem;
   }
   .bold {
@@ -705,7 +720,10 @@ input[type=checkbox] {
 }
 /* Large Screen */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-  #join {
+  .large-text {
+    font-size: 2.5rem;
+  }
+  #java, #bedrock {
     max-height: 500px;
     max-width: 65%;
     overflow: scroll;
@@ -713,13 +731,13 @@ input[type=checkbox] {
     margin: 5px auto;
     padding: 15px;
   }
-  #join h1 {
-    font-size: 2.5rem;
+  #java h1, #bedrock h1 {
+    font-size: 2rem;
   }
-  #join img {
+  #java img, #bedrock img {
     width: 550px;
   }
-  #join .num {
+  #java .num, #bedrock .num {
     font-size: 2.5rem;
   }
   .bold {
@@ -736,7 +754,10 @@ input[type=checkbox] {
 }
 /* medium screen */
 @media (min-width: 768px) and (max-width: 991.98px) {
-  #join {
+  .large-text {
+    font-size: 2.5rem;
+  }
+  #java, #bedrock {
     max-height: 400px;
     max-width: 95%;
     overflow: scroll;
@@ -744,13 +765,13 @@ input[type=checkbox] {
     margin: 5px auto;
     padding: 15px;
   }
-  #join h1 {
-    font-size: 2.5rem;
+  #java h1, #bedrock h1 {
+    font-size: 2rem;
   }
-  #join img {
+  #java img, #bedrock img {
     width: 400px;
   }
-  #join .num {
+  #java .num, #bedrock .num {
     font-size: 2.5rem;
   }
   .bold {
@@ -767,28 +788,31 @@ input[type=checkbox] {
 }
 /* small screen */
 @media (max-width: 767.98px) {
-  #join {
-    max-height: 750px;
-    max-width: 95%;
-    overflow: scroll;
-    overflow-x: hidden;
-    margin: 5px auto;
-    padding-top: 15px;
-  }
-  #join h1 {
+  .large-text {
     font-size: 2rem;
   }
-  #join img {
+  #java, #bedrock {
+    max-height: 750px;
+    max-width: 99%;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin: 5px 0px;
+    padding-top: 15px;
+  }
+  #java h1, #bedrock h1 {
+    font-size: 1rem;
+  }
+  #java img, #bedrock img {
     max-width: 400px;
   }
-  #join .num {
-    font-size: 2.5rem;
+  #java .num, #bedrock .num {
+    font-size: 1.25rem;
   }
   .bold {
     font-weight: bold;
   }
   .bullet {
-    font-size: 1.75rem;
+    font-size: 1.35rem;
     color: #2c923d;
   }
   .bullet a {

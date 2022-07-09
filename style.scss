@@ -97,6 +97,11 @@ h2 {
     display: block;
 }
 
+.instruction {
+    text-align: left;
+    font-size: 2rem;
+}
+
 /* Social Icon Mixin */
 @mixin social-icon($color) {
     color: #fff;
@@ -116,7 +121,9 @@ h2 {
 }
 
 
-
+code{
+    color: $color-coral;
+}
 
 /* Tooltips */
 .tooltip {
@@ -150,7 +157,7 @@ h2 {
         transform: translate(-50%, 100%);
     }
 }
-
+ 
 /* App */
 /* Lazy Load Styles */
 .card-image {
@@ -474,9 +481,12 @@ input[type="checkbox"] {
 
 }
 
-#instructions {
+.instructions {
     max-width: 75%;
     display: inline-block;
+    img{ 
+        max-width: 95%;
+    }
 }
 
 .question {
@@ -652,7 +662,10 @@ input[type="checkbox"] {
 /* Minecraft Join Instructions */
 /* Large Screen */
 @media (min-width: 1200px) {
-    #join {
+    .large-text {
+        font-size: 3rem;
+    }
+    #java, #bedrock {
 
         max-height: 550px;
         max-width: 75%;
@@ -663,7 +676,7 @@ input[type="checkbox"] {
 
         h1 {
 
-            font-size: 3rem;
+            font-size: 2.5rem;
         }
 
         img {
@@ -693,7 +706,10 @@ input[type="checkbox"] {
 
 /* Large Screen */
 @media (min-width: 992px) and (max-width: 1199.98px) {
-    #join {
+    .large-text {
+        font-size: 2.5rem;
+    }
+    #java, #bedrock {
         max-height: 500px;
         max-width: 65%;
         overflow: scroll;
@@ -703,7 +719,7 @@ input[type="checkbox"] {
 
         h1 {
 
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
 
         img {
@@ -732,7 +748,10 @@ input[type="checkbox"] {
 
 /* medium screen */
 @media (min-width: 768px) and (max-width: 991.98px) {
-    #join {
+    .large-text {
+        font-size: 2.5rem;
+    }
+    #java, #bedrock {
         max-height: 400px;
         max-width: 95%;
         overflow: scroll;
@@ -742,7 +761,7 @@ input[type="checkbox"] {
 
         h1 {
 
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
 
         img {
@@ -771,16 +790,19 @@ input[type="checkbox"] {
 
 /* small screen */
 @media (max-width: 767.98px) {
-    #join {
+    .large-text {
+        font-size: 2rem;
+    }
+    #java, #bedrock {
         max-height: 750px;
-        max-width: 95%;
+        max-width: 99%;
         overflow: scroll;
         overflow-x: hidden; // hide horizontal
-        margin: 5px auto;
+        margin: 5px 0px;
         padding-top: 15px;
 
         h1 {
-            font-size: 2rem;
+            font-size: 1rem;
         }
 
         img {
@@ -788,7 +810,7 @@ input[type="checkbox"] {
         }
 
         .num {
-            font-size: 2.5rem;
+            font-size: 1.25rem;
         }
     }
 
@@ -797,7 +819,7 @@ input[type="checkbox"] {
     }
 
     .bullet {
-        font-size: 1.75rem;
+        font-size: 1.35rem;
         color: $color-green;
 
         a {
