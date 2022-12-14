@@ -76,31 +76,34 @@
 		<form class="center" action="https://formspree.io/f/mzbwnnpp" method="POST">
 			<h2 class="title">Discord/Twitch Mod Application</h2>
 			<div>
-				<input placeholder="Name" type="text" name="Name" required>
+				<input placeholder="Name" type="text" name="Who is applying" required>
 			</div>
 			<div>
 				<input placeholder="Twitch" type="text" name="Twitch" required>
 				<input placeholder="Discord" type="text" name="Discord" required>
 			</div>
-			<div class="center">
-				<h2>Select which options you are applying to.</h2>
-				<p>You can select more than one option.</p>
+			<div>
+				<h2 class="title">Select which options you are applying to.</h2>
+				<h2>You can select more than one option.</h2>
 				<div class="radio-item">
 					<label for="discordCheckbox">
-						<input type="checkbox" id="discordCheckbox" name="modForDiscord" value="Discord">
-						On Discord</label>
+						<input type="checkbox" id="discordCheckbox" name="Mod for Discord" value="Discord">
+						Discord</label>
 				</div>
 				<div class="radio-item">
 					<label for="twitchCheckbox">
-						<input type="checkbox" id="twitchCheckbox" name="modForTwitch" value="Twitch">
-						On Twitch</label>
+						<input type="checkbox" id="twitchCheckbox" name="Mod for Twitch" value="Twitch">
+						Twitch</label>
 				</div>
 			</div>
 			<div>
-				<textarea name="message" placeholder="Why do you think you would be a good mod." required></textarea>
+				<textarea name="Why do you think you would be a good mod:" placeholder="Why do you think you would be a good mod." required></textarea>
+				<textarea name="Have you ever been a moderator in a Discord or twitch channel before:" placeholder="Have you ever been a moderator in a Discord or twitch channel before?" required></textarea>
+				<textarea name="How long have you been an active member in this community:" placeholder="How long have you been an active member in this community?" required></textarea>
 			</div>
+			<br/> 
 			<label id="tosCheck">
-				<input type="checkbox" required>
+				<input type="checkbox" name="Over 18" required>
 				I am over 18
 			</label>
 			<div class="center">
@@ -109,7 +112,6 @@
 			</div>
 		</form>
 	</div>
-
 
 	<!------------------------------------ SOCIALS ------------------------------------->
 	<div class="bottom">
