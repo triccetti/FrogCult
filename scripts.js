@@ -61,6 +61,16 @@ function sendMinecraftReport() {
 
 }
 
+function showCommunityAbout() {
+    document.getElementById('modForm').style.display = 'none';
+    document.getElementById('about').style.display = ''; 
+}
+
+function showModApp() {
+    document.getElementById('modForm').style.display = '';
+    document.getElementById('about').style.display = 'none'; 
+}
+
 function showCommissionForm() {
     document.getElementById('portfolio').style.display = 'none';
     document.getElementById('Commissions').style.display = 'none';
