@@ -62,6 +62,12 @@ h2 {
   margin: 10px;
 }
 
+#store {
+  position: fixed;
+  left: 5%;
+  top: 5%;
+}
+
 .bottom {
   display: flex;
   align-items: center;
@@ -83,6 +89,25 @@ h2 {
 .instruction {
   text-align: left;
   font-size: 2rem;
+}
+
+.shop {
+  font-size: 3.5rem;
+  color: #ffeaac;
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  fill: #fff;
+  z-index: 2;
+  text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+}
+.shop span {
+  color: #fff;
+  position: absolute;
+  bottom: -1.65rem;
+  left: 0.5rem;
+  font-size: 1.5rem;
+  font-family: FrogFont;
 }
 
 /* Social Icon Mixin */
@@ -129,6 +154,7 @@ code {
   min-height: 20rem;
   /* layout hack */
   background: #fff center center no-repeat;
+  border-radius: 40px 40px 0px 0px;
   background-size: cover;
   filter: blur(3px);
   /* blur the lowres image */
@@ -176,9 +202,10 @@ a:hover {
   max-width: 20rem;
   margin: 0.9rem;
   text-decoration: none;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
   transition: transform 0.1s ease-in-out, box-shadow 0.1s;
+  z-index: 1;
   position: relative;
 }
 .card a {
@@ -194,11 +221,15 @@ a:hover {
 }
 .card img {
   height: 350px;
+  border-radius: 50px 50px 0px 0px;
 }
 
 .card:hover {
   transform: translateY(-0.5rem) scale(1.0125);
   box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
+}
+.card:hover a {
+  color: #2c923d;
 }
 
 .card-description {
@@ -462,6 +493,7 @@ input[type=checkbox] {
     font-size: 2.5rem;
     text-decoration: none;
     transition: all 0.15s ease;
+    color: #fff;
   }
   .social-icon:hover {
     color: #fff;
@@ -476,82 +508,14 @@ input[type=checkbox] {
     -webkit-filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3));
     filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.3));
   }
-  .social-icon--discord {
-    color: #fff;
-  }
-  .social-icon--discord .cls-1 {
+  .social-icon .cls-1 {
     fill: #2c923d;
   }
-  .social-icon--discord .tooltip {
+  .social-icon .tooltip {
     background: #2c923d;
     color: currentColor;
   }
-  .social-icon--discord .tooltip:after {
-    border-top-color: #2c923d;
-  }
-  .social-icon--twitter {
-    color: #fff;
-  }
-  .social-icon--twitter .cls-1 {
-    fill: #2c923d;
-  }
-  .social-icon--twitter .tooltip {
-    background: #2c923d;
-    color: currentColor;
-  }
-  .social-icon--twitter .tooltip:after {
-    border-top-color: #2c923d;
-  }
-  .social-icon--twitch {
-    color: #fff;
-  }
-  .social-icon--twitch .cls-1 {
-    fill: #2c923d;
-  }
-  .social-icon--twitch .tooltip {
-    background: #2c923d;
-    color: currentColor;
-  }
-  .social-icon--twitch .tooltip:after {
-    border-top-color: #2c923d;
-  }
-  .social-icon--tiktok {
-    color: #fff;
-  }
-  .social-icon--tiktok .cls-1 {
-    fill: #2c923d;
-  }
-  .social-icon--tiktok .tooltip {
-    background: #2c923d;
-    color: currentColor;
-  }
-  .social-icon--tiktok .tooltip:after {
-    border-top-color: #2c923d;
-  }
-  .social-icon--instagram {
-    color: #fff;
-  }
-  .social-icon--instagram .cls-1 {
-    fill: #2c923d;
-  }
-  .social-icon--instagram .tooltip {
-    background: #2c923d;
-    color: currentColor;
-  }
-  .social-icon--instagram .tooltip:after {
-    border-top-color: #2c923d;
-  }
-  .social-icon--youtube {
-    color: #fff;
-  }
-  .social-icon--youtube .cls-1 {
-    fill: #2c923d;
-  }
-  .social-icon--youtube .tooltip {
-    background: #2c923d;
-    color: currentColor;
-  }
-  .social-icon--youtube .tooltip:after {
+  .social-icon .tooltip:after {
     border-top-color: #2c923d;
   }
   .social-icon i {

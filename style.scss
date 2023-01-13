@@ -7,6 +7,7 @@
 /* Color Variables */
 $color-discord: #7289da;
 $color-twitch: #6441a5;
+$color-etsy: #EB6D20;
 $color-twitter: #1DA1F2;
 $color-tiktok: #ff0050;
 $color-instagram: #405DE6;
@@ -79,6 +80,12 @@ h2 {
     margin: 10px;
 }
 
+#store {
+    position: fixed;
+    left: 5%;
+    top: 5%;
+}
+
 .bottom {
     display: flex;
     align-items: center;
@@ -100,6 +107,26 @@ h2 {
 .instruction {
     text-align: left;
     font-size: 2rem;
+}
+
+.shop {
+    font-size: 3.5rem;
+    color: #ffeaac;
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    fill: #fff;
+    z-index: 2; 
+    
+    text-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
+    span {
+        color: #fff;
+        position: absolute;
+        bottom: -1.65rem;
+        left: 0.5rem;
+        font-size: 1.5rem;
+        font-family: FrogFont;
+    }
 }
 
 /* Social Icon Mixin */
@@ -165,6 +192,8 @@ code{
     min-height: 20rem;
     /* layout hack */
     background: #fff center center no-repeat;
+    
+    border-radius: 40px 40px 0px 0px;
     background-size: cover;
     filter: blur(3px);
     /* blur the lowres image */
@@ -205,6 +234,7 @@ a {
         color: $color-light-green;
     }
 }
+ 
 
 .card {
     color: white;
@@ -216,10 +246,11 @@ a {
     max-width: 20rem;
     margin: 0.9rem;
     text-decoration: none;
-    overflow: hidden;
+    overflow: visible;
     box-shadow: 0 0 3rem -1rem rgba(0, 0, 0, 0.5);
     transition: transform 0.1s ease-in-out, box-shadow 0.1s;
 
+    z-index: 1;
     position: relative;
 
     a {
@@ -237,16 +268,20 @@ a {
     }
 
     img {
-        height: 350px;
+        height: 350px; 
+        border-radius: 50px 50px 0px 0px;
+    } 
+}
+
+.card:hover{
+    transform: translateY(-0.5rem) scale(1.0125);
+    box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
+    a { 
+        color: $color-green;
     }
 }
 
-.card:hover {
-    transform: translateY(-0.5rem) scale(1.0125);
-    box-shadow: 0 0.5em 3rem -1rem rgba(0, 0, 0, 0.5);
-}
-
-.card-description {
+.card-description{
     display: block;
     padding: 1em;
     text-decoration: none;
@@ -548,29 +583,7 @@ input[type="checkbox"] {
             }
         }
 
-        &--discord {
-            @include social-icon($color-green);
-        }
-
-        &--twitter {
-            @include social-icon($color-green);
-        }
-
-        &--twitch {
-            @include social-icon($color-green);
-        }
-
-        &--tiktok {
-            @include social-icon($color-green);
-        }
-
-        &--instagram {
-            @include social-icon($color-green);
-        }
-
-        &--youtube {
-            @include social-icon($color-green);
-        }
+        @include social-icon($color-green);
 
         i {
             position: relative;
