@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Frog Cult Creations</title>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=0.90" />
+
+	<!-- Font awesome and Google fonts -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/4b2af6bf52.js" crossorigin="anonymous"></script>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+	<!-- For Emails -->
+	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+	<script src="https://smtpjs.com/v2/smtp.js"></script>
+
+	<!-- Pinterest -->
+	<meta name="p:domain_verify" content="06ec1a3087f623f1ff93811c5aa69de2" />
+
+	<!-- My code! -->
+	<script src="scripts.js"></script>
+	<link href="style.css" rel="stylesheet" />
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4TB4FYE05"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-Y4TB4FYE05');
+	</script>
+</head>
+
+<body>
+	<!------------------------------------ HEADER ------------------------------------->
+	<div id="header" class="center">
+		<a target="_self" href="https://frogcult.net/">
+			<h1 class="button">Frog Cult</h1>
+		</a>
+	</div>
+
+
+	<!------------------------------------ Care  ------------------------------------->
+	<div id="Care" class="center">
+		<ul class="menu">
+			<a class="card button" target="_blank" href="https://www.etsy.com/shop/FrogCultCreations">
+				<h3>To Etsy Shop <i class="fa-solid fa-arrow-right"></i></h3>
+            </a>
+		</ul>
+		<div id="about"> 
+            
+		    <h2>- Crochet Care Tips! -</h2>
+
+			<h2 class="title">Handmade Crochet Care Tips <i class="fa-solid fa-seedling"></i></h2> 
+			<h3><i class="fa-solid fa-hands-bubbles"></i> Hand wash only, do not wring out in water.</h3>
+			<h3><i class="fa-solid fa-cloud-sun"></i> Air dry and avoid the sun or dryer.</h3>
+			<h3><i class="fa-solid fa-circle-xmark"></i> Do not pull or tug the yarn.</h3>
+            <h3><i class="fa-solid fa-soap"></i> Spot clean with gentle soap and water.</h3>
+            <h3><i class="fa-solid fa-cat"></i> Keep out of reach of children or pets.</h3>
+		</div>
+	</div>
+
+	<div id="modForm" style="display:none;">
+
+		<!-- modify this form HTML and place wherever you want your form --> 
+		<form class="center" action="https://formspree.io/f/mzbwnnpp" method="POST">
+			<h2 class="title">Discord/Twitch Mod Application</h2>
+			<div>
+				<input placeholder="Name" type="text" name="Who is applying" required>
+			</div>
+			<div>
+				<input placeholder="Twitch" type="text" name="Twitch" required>
+				<input placeholder="Discord" type="text" name="Discord" required>
+			</div>
+			<div>
+				<h2 class="title">Select which options you are applying to.</h2>
+				<h2>You can select more than one option.</h2>
+				<div class="radio-item">
+					<label for="discordCheckbox">
+						<input type="checkbox" id="discordCheckbox" name="Mod for Discord" value="Discord">
+						Discord</label>
+				</div>
+				<div class="radio-item">
+					<label for="twitchCheckbox">
+						<input type="checkbox" id="twitchCheckbox" name="Mod for Twitch" value="Twitch">
+						Twitch</label>
+				</div>
+			</div>
+			<div>
+				<textarea name="Why do you think you would be a good mod:" placeholder="Why do you think you would be a good mod." required></textarea>
+				<textarea name="Have you ever been a moderator in a Discord or twitch channel before:" placeholder="Have you ever been a moderator in a Discord or twitch channel before?" required></textarea>
+				<textarea name="How long have you been an active member in this community:" placeholder="How long have you been an active member in this community?" required></textarea>
+			</div>
+			<br/> 
+			<h2 class="title">You will not be considered mod if you are under the age of 18.</h2>
+			<label id="tosCheck">
+				<input type="checkbox" name="Over 18" required>
+				I am over 18
+			</label>
+			<div class="center">
+				<button class="submit button" onclick="showCommunityAbout()">Cancel</button style="width:700px">
+				<button class="submit button" type="submit">Send</button style="width:700px">
+			</div>
+		</form>
+	</div>
+
+<!------------------------------------ SOCIALS ------------------------------------->
+<div class="bottom">
+	<div class="social-icons">
+		<a class="social-icon social-icon--twitch" href="https://www.twitch.tv/tayloristic7" target="_blank">
+			<i class="fa fa-twitch"></i>
+			<div class="tooltip">Twitch</div>
+			<svg id="frog" class=".cls-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400.06 455.01">
+				<circle class="cls-1" cx="200.03" cy="254.98" r="200.03" />
+				<circle class="cls-1" cx="86.18" cy="81.06" r="81.06" />
+				<circle class="cls-1" cx="314.93" cy="81.7" r="80.41" />
+			</svg>
+		</a>
+		<a class="social-icon social-icon--etsy" href="https://www.etsy.com/shop/FrogCultCreations" target="_blank">
+			<i class="fa fa-etsy"></i>
+			<div class="tooltip">Etsy</div>
+			<svg id="frog" class=".cls-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400.06 455.01">
+				<circle class="cls-1" cx="200.03" cy="254.98" r="200.03" />
+				<circle class="cls-1" cx="86.18" cy="81.06" r="81.06" />
+				<circle class="cls-1" cx="314.93" cy="81.7" r="80.41" />
+			</svg>
+		</a>
+		<a class="social-icon social-icon--discord" href="https://discord.gg/Chvv8m7nkw" target="_blank">
+			<i class="fab fa-discord"></i>
+			<div class="tooltip">Discord</div>
+			<svg id="frog" class=".cls-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400.06 455.01">
+				<circle class="cls-1" cx="200.03" cy="254.98" r="200.03" />
+				<circle class="cls-1" cx="86.18" cy="81.06" r="81.06" />
+				<circle class="cls-1" cx="314.93" cy="81.7" r="80.41" />
+			</svg>
+		</a>
+		<a class="social-icon social-icon--tiktok" href="https://www.tiktok.com/@tayloristic7" target="_blank">
+			<i class="fa-brands fa-tiktok"></i>
+			<div class="tooltip">tiktok</div>
+			<svg id="frog" class=".cls-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400.06 455.01">
+				<circle class="cls-1" cx="200.03" cy="254.98" r="200.03" />
+				<circle class="cls-1" cx="86.18" cy="81.06" r="81.06" />
+				<circle class="cls-1" cx="314.93" cy="81.7" r="80.41" />
+			</svg>
+		</a>
+		<a class="social-icon social-icon--youtube" href="https://www.youtube.com/channel/UCkJI93zHt4N8poXicCvmtJQ"
+			target="_blank">
+			<i class="fa fa-youtube"></i>
+			<div class="tooltip">youtube</div>
+			<svg id="frog" class=".cls-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400.06 455.01">
+				<circle class="cls-1" cx="200.03" cy="254.98" r="200.03" />
+				<circle class="cls-1" cx="86.18" cy="81.06" r="81.06" />
+				<circle class="cls-1" cx="314.93" cy="81.7" r="80.41" />
+			</svg>
+		</a>
+		<a class="social-icon social-icon--instagram" href="https://www.instagram.com/tayloristic7/"
+			target="_blank">
+			<i class="fa fa-instagram"></i>
+			<div class="tooltip">instagram</div>
+			<svg id="frog" class=".cls-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400.06 455.01">
+				<circle class="cls-1" cx="200.03" cy="254.98" r="200.03" />
+				<circle class="cls-1" cx="86.18" cy="81.06" r="81.06" />
+				<circle class="cls-1" cx="314.93" cy="81.7" r="80.41" />
+			</svg>
+		</a>
+		<a class="social-icon social-icon--twitter" href="https://twitter.com/tayloristic7" target="_blank">
+			<i class="fa fa-twitter"></i>
+			<div class="tooltip">twitter</div>
+			<svg id="frog" class=".cls-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400.06 455.01">
+				<circle class="cls-1" cx="200.03" cy="254.98" r="200.03" />
+				<circle class="cls-1" cx="86.18" cy="81.06" r="81.06" />
+				<circle class="cls-1" cx="314.93" cy="81.7" r="80.41" />
+			</svg>
+		</a>
+	</div>
+</div>
+<div class="center" style="margin-top: 15px;">
+	<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+	<script
+		type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#2c923d', 'V7V6BQ6YS'); kofiwidget2.draw();</script>
+</div>
+</body>
+<footer>
+
+</footer>
+
+</html>
